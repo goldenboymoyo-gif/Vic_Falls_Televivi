@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <body>
 
     <!-- Navigation -->
@@ -15,16 +15,16 @@
 <nav>
 
     <div class="logo">
-        <img src="images/logo.jpeg" alt="VicFalls Televivi">
+        <img src="images/logo.png" alt="VicFalls Televivi">
     </div>
 
     <ul class="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Latest News</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Live</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="index.html#news">Latest News</a></li>
+        <li><a href="index.html#Events">Events</a></li>
+        <li><a href="index.html#live">Live</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
     </ul>
 
     <div class="nav-actions">
@@ -36,9 +36,9 @@
             </button>
         </div>
 
-        <a href="#" class="login-btn">Login</a>
+        <a href="login.html" class="login-btn">Login</a>
 
-        <a href="#" class="signup-btn">Sign Up</a>
+        <a href="sign-up.html" class="signup-btn">Sign Up</a>
 
     </div>
 
@@ -46,7 +46,8 @@
     <!-- Breaking News -->
     <section class="breaking-news">
         <div class="breaking-title">
-            BREAKING NEWS
+            Latest Updates
+            <i class="fas fa-bullhorn"></i>
         </div>
 
         <div class="ticker">
@@ -58,6 +59,15 @@
 
     <!-- Hero Section -->
     <section class="hero">
+    <iframe
+        class="hero-video"
+        src="https://www.youtube.com/embed/TH-lWgBoUAM?autoplay=1&mute=1&controls=0&loop=1&playlist=TH-lWgBoUAM&rel=0&modestbranding=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+    </iframe>
+    
+    <div class="hero-overlay"></div>
 
         <div class="hero-content">
 
@@ -98,7 +108,7 @@
 
     </section>
 
-    <!-- Latest News -->
+     <!-- Latest News -->
     <section class="latest-news">
 
         <div class="section-top">
@@ -181,10 +191,11 @@
                 <p>Experience live performances from top artists at the Victoria Falls Music Festival.</p>
             </div>
             </section>
+    
 
 <!-- Live Section -->
 
-<section class="live-section">
+<section class="live-section" id="live">
 
     <div class="section-top">
 
@@ -250,7 +261,7 @@
         
 <!--ABOUT SECTION-->
 
-<section class="about-section">
+<section class="about-section" id="about">
 
     <div class="section-top">
 
@@ -309,7 +320,7 @@
 
         <div class="about-image">
 
-            <img src="images/logo.jpeg" alt="VicFalls Televivi">
+            <img src="images/logo.png" alt="VicFalls Televivi">
 
         </div>
 

@@ -107,6 +107,9 @@ nav{
 
     overflow: hidden;
 }
+.search-box:hover{
+    border-color: red;
+}
 
 .search-box input{
     flex: 1;
@@ -133,9 +136,7 @@ nav{
     cursor: pointer;
 }
 
-.search-box button:hover{
-    color: red;
-}
+
 
 /* LOGIN */
 
@@ -149,9 +150,6 @@ nav{
     transition: .3s;
 }
 
-.login-btn:hover{
-    color: red;
-}
 
 /* SIGN UP */
 
@@ -189,6 +187,7 @@ nav{
     align-items:center;
     justify-content:center;
     font-weight:bold;
+    gap: 1rem;
 }
 
 .ticker{
@@ -205,27 +204,37 @@ nav{
 .hero{
     position: relative;
     height: 90vh;
+    overflow: hidden;
     display: flex;
     align-items: center;
     padding: 0 8%;
-    overflow: hidden;
-
-    background-image: url('../images/hero-setcion.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    transition: background-image 1s ease-in-out;
 }
 
-/* Dark Overlay */
+/* YouTube video background */
+.hero-video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-.hero::before{
-    content: "";
+    width: 100vw;
+    height: 56.25vw; /* 16:9 ratio */
+
+    min-width: 177.77vh;
+    min-height: 100vh;
+
+    transform: translate(-50%, -50%);
+    border: none;
+    pointer-events: none;
+    z-index: 0;
+}
+/* DARK OVERLAY (FIXED FULL COVER) */
+.hero-overlay{
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,.55);
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
 }
+
 
 .hero-content{
     position: relative;
@@ -357,6 +366,7 @@ nav{
     height: 100%;
     object-fit: cover;
 }
+
 /* Latest News */
 
 .latest-news{
@@ -841,4 +851,72 @@ nav{
         gap: 40px;
     }
 
+}
+
+/* Sign Up Form */
+
+
+.signup-container{
+    width:100%;
+    max-width:400px;
+    padding:20px;
+}
+
+.signup-form{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.signup-form h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.input-group{
+    margin-bottom:15px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:600;
+}
+
+.input-group input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#d60000;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#b30000;
+}
+
+p{
+    text-align:center;
+    margin-top:15px;
+}
+
+a{
+    color:#d60000;
+    text-decoration:none;
+}
+
+.back-home{
+    text-align:center;
+    margin-top:20px;
 }
