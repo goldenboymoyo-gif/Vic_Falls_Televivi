@@ -12,35 +12,59 @@
 
     <!-- Navigation -->
 
-<nav>
-
-    <div class="logo">
-        <img src="images/logo.png" alt="VicFalls Televivi">
-    </div>
-
-    <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="index.html#news">Latest News</a></li>
-        <li><a href="index.html#Events">Events</a></li>
-        <li><a href="index.html#live">Live</a></li>
-        <li><a href="index.html#about">About Us</a></li>
-        <li><a href="index.html#contact">Contact Us</a></li>
-    </ul>
-
-    <div class="nav-actions">
-
-        <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <button>
-                <i class="fas fa-search"></i>
-            </button>
+ <nav>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo.png" alt="VicFalls Televivi" />
         </div>
 
-        <a href="login.html" class="login-btn">Login</a>
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links" id="desktopNavLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="index.html#news">Latest News</a></li>
+            <li><a href="index.html#Events">Events</a></li>
+            <li><a href="index.html#live">Live</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
 
-        <a href="sign-up.html" class="signup-btn">Sign Up</a>
+        <!-- Desktop Right Actions -->
+        <div class="nav-actions desktop-actions" id="desktopNavActions">
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="sign-up.html" class="signup-btn">Sign Up</a>
+        </div>
 
-    </div>
+        <!-- Mobile Overlay (full‑screen menu) -->
+        <div class="mobile-overlay" id="mobileOverlay">
+            <ul class="mobile-nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="index.html#news">Latest News</a></li>
+                <li><a href="index.html#Events">Events</a></li>
+                <li><a href="index.html#live">Live</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <div class="nav-actions mobile-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search..." />
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="sign-up.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
 
 </nav>
     <!-- Breaking News -->
@@ -71,7 +95,7 @@
 
         <div class="hero-content">
 
-            <h1>The Voice of Victoria Falls</h1>
+            <h1 style="font-size: 50px;">The Voice of Victoria Falls</h1>
 
             <p>
                 Bringing you news, stories and events that matter.
@@ -108,7 +132,7 @@
 
     </section>
 
-     <!-- Latest News -->
+    <!-- Latest News -->
     <section class="latest-news">
 
         <div class="section-top">
@@ -443,6 +467,8 @@
     </div>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
