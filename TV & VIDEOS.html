@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tv & videos</title>
+    <link rel="stylesheet" href="./css/tv&videos.css">
+</head>
+<body>
+    
+<nav>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo.png" alt="VicFalls Televivi" />
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links" id="desktopNavLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="index.html#news">Latest News</a></li>
+            <li><a href="index.html#Events">Events</a></li>
+            <li><a href="index.html#live">Live</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+
+        <!-- Desktop Right Actions -->
+        <div class="nav-actions desktop-actions" id="desktopNavActions">
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="sign-up.html" class="signup-btn">Sign Up</a>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+        <!-- Mobile Overlay (full‑screen menu) -->
+        <div class="mobile-overlay" id="mobileOverlay">
+            <ul class="mobile-nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="index.html#news">Latest News</a></li>
+                <li><a href="index.html#Events">Events</a></li>
+                <li><a href="index.html#live">Live</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <div class="nav-actions mobile-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search..." />
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="sign-up.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+
+
+
+    <!-- ============================================================ -->
+    <!-- TV & VIDEOS SECTION – Featured + Small Cards -->
+    <!-- ============================================================ -->
+    <section class="videos-section">
+
+        <!-- Header -->
+        <div class="videos-header">
+            <h1><i class="fas fa-play-circle"></i> VIDEOS</h1>
+            <p>Watch the latest stories from Victoria Falls and beyond.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">ALL VIDEOS</button>
+            <button class="filter-btn" data-filter="music">MUSIC</button>
+            <button class="filter-btn" data-filter="interview">INTERVIEWS</button>
+            <button class="filter-btn" data-filter="documentary">DOCUMENTARY</button>
+            <button class="filter-btn" data-filter="podcast">PODCAST</button>
+            <button class="filter-btn" data-filter="faith">FAITH</button>
+        </div>
+
+        <!-- ===== FEATURED VIDEO (BIG CARD) ===== -->
+        <div class="featured-row">
+            <div class="featured-card" data-category="interview" data-video-id="ZMnFUL1UA9g">
+                <div class="featured-thumbnail">
+                    <img src="https://img.youtube.com/vi/ZMnFUL1UA9g/mqdefault.jpg" alt="BigBoi Huncho shares his journey" loading="lazy" />
+                    <div class="featured-play-btn"><i class="fas fa-play-circle"></i></div>
+                    <span class="featured-duration">30:00</span>
+                </div>
+                <div class="featured-info">
+                    <span class="featured-badge">FEATURED</span>
+                    <h2>BigBoi Huncho shares his journey, struggles, passion &amp; music vision</h2>
+                    <p>Such an inspiring conversation with Zimiso Mbuyazwe, popularly known as BigBoi Huncho, on the Downtown Playlist Podcast at Vic Falls Televivi! From Chinotimba roots to chasing greatness through music.[reference:0]</p>
+                    <div class="featured-meta">
+                        <span><i class="far fa-calendar-alt"></i> May 27, 2026</span>
+                        <span><i class="far fa-eye"></i> 32 Views</span>
+                        <span><i class="far fa-clock"></i> 30:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== LATEST VIDEOS (SMALL CARDS) ===== -->
+        <div class="video-row">
+            <div class="row-header">
+                <h2><i class="fas fa-clock"></i> More Videos</h2>
+            </div>
+
+            <div class="video-grid">
+
+                <!-- Card 1 – Pmaxy ft Jaden Drip – Impilo -->
+                <div class="video-card" data-category="music" data-video-id="zFPAW--zi5E">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/zFPAW--zi5E/mqdefault.jpg" alt="Pmaxy ft Jaden Drip – Impilo" loading="lazy" />
+                        <span class="duration">4:15</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Pmaxy ft Jaden Drip – Impilo (Official Music Video)</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 15, 2026</span>
+                            <span><i class="far fa-eye"></i> 193</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 – Connecting with God | Pastor Dillon -->
+                <div class="video-card" data-category="faith" data-video-id="vxSTWPz6KbQ">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/vxSTWPz6KbQ/mqdefault.jpg" alt="Connecting with God | Pastor Dillon" loading="lazy" />
+                        <span class="duration">12:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Connecting with God | Pastor Dillon</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 2026</span>
+                            <span><i class="far fa-eye"></i> 1.2K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 – Road To The Africa Day Expo 2026 | Documentary -->
+                <div class="video-card" data-category="documentary" data-video-id="peSXmPAaGAs">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/peSXmPAaGAs/mqdefault.jpg" alt="Road To The Africa Day Expo 2026" loading="lazy" />
+                        <span class="duration">8:30</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Road To The Africa Day Expo 2026 | Documentary</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 20, 2026</span>
+                            <span><i class="far fa-eye"></i> 96</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 – Coach Alex Garikayi Muringa – Profile -->
+                <div class="video-card" data-category="interview" data-video-id="yryOS9tOHPM">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/yryOS9tOHPM/mqdefault.jpg" alt="Coach Alex Garikayi Muringa – Profile" loading="lazy" />
+                        <span class="duration">6:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Coach Alex Garikayi Muringa – Profile</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> April 23, 2026</span>
+                            <span><i class="far fa-eye"></i> 32</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 – The Majestic Podcast – Episode 1 -->
+                <div class="video-card" data-category="podcast" data-video-id="nvaYSBo-E0s">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/nvaYSBo-E0s/mqdefault.jpg" alt="The Majestic Podcast – Episode 1" loading="lazy" />
+                        <span class="duration">45:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>🎙 Episode 1 of The Majestic Podcast is LIVE!</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> March 30, 2026</span>
+                            <span><i class="far fa-eye"></i> 45</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 – Connection with God | Pastor Jonathan & Madison Wenger -->
+                <div class="video-card" data-category="faith" data-video-id="MUS21RjgkLQ">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/MUS21RjgkLQ/mqdefault.jpg" alt="Connection with God" loading="lazy" />
+                        <span class="duration">10:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Connection with God by Pastor Jonathan &amp; Madison Wenger ✨</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> June 2026</span>
+                            <span><i class="far fa-eye"></i> 333</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- VIDEO MODAL (YouTube iframe) -->
+    <!-- ============================================================ -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="modal-video-wrapper">
+                <iframe id="modalIframe" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== VIDEO MODAL ===== -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="modal-placeholder">
+                <i class="fas fa-video"></i>
+                <h3>Video Coming Soon</h3>
+                <p>This video is not yet available. Check back later!</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
