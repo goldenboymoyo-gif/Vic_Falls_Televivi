@@ -7,46 +7,67 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
     <!-- Navigation -->
 
 <nav>
-
     <div class="logo">
-        <img src="images/logo.jpeg" alt="VicFalls Televivi">
+        <img src="images/logo.png" alt="VicFalls Televivi" />
     </div>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="desktopNavLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#news">Latest News</a></li>
         <li><a href="index.html#events">Events</a></li>
+        <li><a href="TV & VIDEOS.html">TV & Videos</a></li>
         <li><a href="index.html#live">Live</a></li>
-        <li><a href="#about">About Us</a></li>
+        <li><a href="index.html#about">About Us</a></li>
         <li><a href="index.html#contact">Contact Us</a></li>
     </ul>
 
-    <div class="nav-actions">
-
+    <div class="nav-actions desktop-actions" id="desktopNavActions">
         <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <button>
-                <i class="fas fa-search"></i>
-            </button>
+            <input type="text" placeholder="Search..." />
+            <button><i class="fas fa-search"></i></button>
         </div>
-
-        <a href="#" class="login-btn">Login</a>
-
-        <a href="#" class="signup-btn">Sign Up</a>
-
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="sign-up.html" class="signup-btn">Sign Up</a>
     </div>
 
+    <div class="mobile-overlay" id="mobileOverlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#news">Latest News</a></li>
+            <li><a href="index.html#events">Events</a></li>
+            <li><a href="TV & VIDEOS.html">TV & Videos</a></li>
+            <li><a href="index.html#live">Live</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions mobile-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="sign-up.html" class="signup-btn">Sign Up</a>
+        </div>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </nav>
     <!-- Breaking News -->
     <section class="breaking-news">
         <div class="breaking-title">
-            BREAKING NEWS
+            Latest Updates
+            <i class="fas fa-bullhorn"></i>
         </div>
 
         <div class="ticker">
@@ -58,10 +79,19 @@
 
     <!-- Hero Section -->
     <section class="hero">
+    <iframe
+        class="hero-video"
+        src="https://www.youtube.com/embed/TH-lWgBoUAM?autoplay=1&mute=1&controls=0&loop=1&playlist=TH-lWgBoUAM&rel=0&modestbranding=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+    </iframe>
+    
+    <div class="hero-overlay"></div>
 
         <div class="hero-content">
 
-            <h1>The Voice of Victoria Falls</h1>
+            <h1 style="font-size: 50px;">The Voice of Victoria Falls</h1>
 
             <p>
                 Bringing you news, stories and events that matter.
@@ -99,7 +129,7 @@
     </section>
 
     <!-- Latest News -->
-    <section class="latest-news">
+    <section class="latest-news" id="news">
 
         <div class="section-top">
 
@@ -148,7 +178,7 @@
 
     </section>
 
-    <section class="events">
+    <section class="events" id="events">
 
         <div class="section-top">
 
@@ -181,10 +211,11 @@
                 <p>Experience live performances from top artists at the Victoria Falls Music Festival.</p>
             </div>
             </section>
+    
 
 <!-- Live Section -->
 
-<section class="live-section">
+<section class="live-section" id="live">
 
     <div class="section-top">
 
@@ -250,31 +281,68 @@
         
 <!--About Us Section -->
 
-<section class="home-about" id="about">
-    <div class="about-content">
-        <span class="about-label">ABOUT US</span>
+<section class="about-section" id="about">
 
-        <h1>
-            Telling Our Stories,<br>
-            Connecting Our Community
-        </h1>
+    <div class="section-top">
 
-        <p>
-            Vic Falls Televiv is more than just a media company — we are
-            storytellers, visionaries, and community connectors. Based in
-            Victoria Falls, we are dedicated to producing and broadcasting
-            content that informs, inspires, and empowers.
-        </p>
+        <div>
+            <h1>About Us</h1>
+            <p>The story behind VicFalls Televivi</p>
+        </div>
 
-        <div class="hero-buttons">
-            <a href="#" class="btn-primary">Watch Live</a>
-            <a href="#" class="btn-secondary">Our Programmes</a>
+    </div>
+
+    <div class="about-container">
+
+        <!-- Left Content -->
+
+        <div class="about-content">
+
+            <h3>The Voice of Victoria Falls</h3>
+
+            <p>
+                VicFalls Televivi is a digital media platform dedicated to delivering
+                trusted news, sports, entertainment, tourism and community stories
+                from Victoria Falls and beyond. Through quality journalism and engaging
+                storytelling, we strive to inform, educate and connect communities.
+            </p>
+
+            <p>
+                We are committed to providing timely coverage of events and creating
+                a platform that showcases the people, culture and opportunities of
+                Victoria Falls to Zimbabwe, Africa and the world.
+            </p>
+
+            <div class="about-stats">
+
+                <div class="stat-box">
+                    <h4>500+</h4>
+                    <span>Stories Covered</span>
+                </div>
+
+                <div class="stat-box">
+                    <h4>100+</h4>
+                    <span>Events Broadcast</span>
+                </div>
+
+                <div class="stat-box">
+                    <h4>50K+</h4>
+                    <span>Viewers Reached</span>
+                </div>
+
+            </div>
+
+            <a href="#" class="about-btn">Learn More</a>
+
         </div>
     </div>
 
-    <div class="about-image">
-        <a href="about.html" class="view-more-overlay">View more</a>
-        <img src="images/About us.png" alt="Victoria Falls Media">
+        <div class="about-image">
+
+            <img src="images/logo.jpeg" alt="VicFalls Televivi">
+
+        </div>
+
     </div>
 
 </section>
@@ -394,6 +462,8 @@
     </div>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
