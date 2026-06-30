@@ -891,24 +891,6 @@ nav{
     color: #d00000;
 }
 
-.section-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:40px;
-}
-.section-top h2{
-    font-size:40px;
-}
-.section-top p{
-    color:gray;
-    margin-top:10px;
-}
-.view-all{
-    color:red;
-    text-decoration:none;
-    font-weight:bold;
-}
 .events-container{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -957,15 +939,6 @@ nav{
 .upcoming-events{
     padding: 20px;
     margin: 15px;
-}
-
-.card{
-    display:grid; 
-    margin-top: 20px;  
-}
-.nav{
-    margin-top: 20px;
-    margin-bottom: 15px;
 }
 
 body {
