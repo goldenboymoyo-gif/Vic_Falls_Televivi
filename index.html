@@ -8,29 +8,46 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
 <body>
 
     <!-- Navigation -->
 
 <nav>
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images/logo.png" alt="VicFalls Televivi" />
-        </div>
+    <div class="logo">
+        <img src="images/logo.png" alt="VicFalls Televivi" />
+    </div>
 
-        <!-- Desktop Navigation Links -->
-        <ul class="nav-links" id="desktopNavLinks">
-            <li><a href="#">Home</a></li>
+    <ul class="nav-links" id="desktopNavLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#news">Latest News</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="TV & VIDEOS.html">TV & Videos</a></li>
+        <li><a href="index.html#live">Live</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+    </ul>
+
+    <div class="nav-actions desktop-actions" id="desktopNavActions">
+        <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="sign-up.html" class="signup-btn">Sign Up</a>
+    </div>
+
+    <div class="mobile-overlay" id="mobileOverlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
             <li><a href="index.html#news">Latest News</a></li>
-            <li><a href="index.html#Events">Events</a></li>
+            <li><a href="index.html#events">Events</a></li>
             <li><a href="TV & VIDEOS.html">TV & Videos</a></li>
             <li><a href="index.html#live">Live</a></li>
             <li><a href="index.html#about">About Us</a></li>
             <li><a href="index.html#contact">Contact Us</a></li>
         </ul>
-
-        <!-- Desktop Right Actions -->
-        <div class="nav-actions desktop-actions" id="desktopNavActions">
+        <div class="nav-actions mobile-actions">
             <div class="search-box">
                 <input type="text" placeholder="Search..." />
                 <button><i class="fas fa-search"></i></button>
@@ -38,36 +55,13 @@
             <a href="login.html" class="login-btn">Login</a>
             <a href="sign-up.html" class="signup-btn">Sign Up</a>
         </div>
+    </div>
 
-        <!-- Mobile Overlay (full‑screen menu) -->
-        <div class="mobile-overlay" id="mobileOverlay">
-            <ul class="mobile-nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="index.html#latest-news">Latest News</a></li>
-                <li><a href="index.html#Events">Events</a></li>
-                <li><a href="#">TV & Videos</a></li>
-                <li><a href="index.html#live">Live</a></li>
-                <li><a href="index.html#about">About Us</a></li>
-                <li><a href="index.html#contact">Contact Us</a></li>
-            </ul>
-            <div class="nav-actions mobile-actions">
-                <div class="search-box">
-                    <input type="text" placeholder="Search..." />
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                <a href="login.html" class="login-btn">Login</a>
-                <a href="sign-up.html" class="signup-btn">Sign Up</a>
-            </div>
-        </div>
-
-        <!-- Hamburger Button -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </nav>
     <!-- Breaking News -->
     <section class="breaking-news">
@@ -135,7 +129,7 @@
     </section>
 
     <!-- Latest News -->
-    <section class="latest-news">
+    <section class="latest-news" id="news">
 
         <div class="section-top">
 
@@ -184,7 +178,7 @@
 
     </section>
 
-    <section class="events">
+    <section class="events" id="events">
 
         <div class="section-top">
 
@@ -288,7 +282,7 @@
 
 </section>
         
-<!--ABOUT SECTION-->
+<!--About Us Section -->
 
 <section class="about-section" id="about">
 
@@ -344,12 +338,11 @@
             <a href="#" class="about-btn">Learn More</a>
 
         </div>
-
-        <!-- Right Image -->
+    </div>
 
         <div class="about-image">
 
-            <img src="images/logo.png" alt="VicFalls Televivi">
+            <img src="images/logo.jpeg" alt="VicFalls Televivi">
 
         </div>
 
@@ -425,12 +418,12 @@
         <div class="footer-box">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#live">Live</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#news">News</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#live">Live</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </div>
 
