@@ -116,6 +116,7 @@ nav {
   top: 0;
   left: 50%;
   width: 100vw;
+  min-width: 100vw;
   height: 100%;
   transform: translateX(-50%);
   z-index: 0;
@@ -125,9 +126,11 @@ nav {
 .hero-video {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: 160%;
+  min-width: 100%;
   height: 100%;
+  transform: translateX(-50%);
   border: none;
 }
 
@@ -563,10 +566,10 @@ nav {
 
 .advert-card {
   position: absolute;
-  bottom: 18px;
-  right: 32px;
-  width: 240px;
-  min-height: 56px;
+  bottom: 16px;
+  right: 28px;
+  width: 248px;
+  min-height: 52px;
   background: rgba(255,255,255,0.94);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -633,8 +636,8 @@ nav {
 }
 
 .advert-image {
-  width: 64px;
-  min-height: 56px;
+  width: 60px;
+  min-height: 52px;
   flex-shrink: 0;
 }
 
@@ -642,7 +645,7 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  padding: 6px;
+  padding: 4px;
   background: transparent;
 }
 
