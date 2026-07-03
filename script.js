@@ -228,40 +228,6 @@
     }
 
     // ============================================================
-    // HERO VIDEO - play overlay fallback for autoplay reliability
-    // ============================================================
-    const heroPlaceholder = document.querySelector('.hero-video-placeholder');
-    if (heroPlaceholder) {
-        function createHeroIframe(videoId) {
-            const iframe = document.createElement('iframe');
-            iframe.className = 'hero-video';
-            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1';
-            iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
-            iframe.setAttribute('allowfullscreen', '');
-            iframe.loading = 'eager';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.border = '0';
-            return iframe;
-        }
-
-        function playHeroVideo() {
-            const videoId = heroPlaceholder.dataset.videoId;
-            if (!videoId) return;
-            const container = heroPlaceholder.parentElement;
-            const iframe = createHeroIframe(videoId);
-            // Remove placeholder and insert iframe
-            container.insertBefore(iframe, container.firstChild);
-            heroPlaceholder.style.display = 'none';
-        }
-
-        heroPlaceholder.addEventListener('click', playHeroVideo);
-        heroPlaceholder.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') playHeroVideo();
-        });
-    }
-
-    // ============================================================
     // CATEGORY FILTERS
     // ============================================================
     function setupFilters(containerSelector, cardSelector) {
