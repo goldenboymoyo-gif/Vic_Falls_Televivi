@@ -7,67 +7,46 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
     <!-- Navigation -->
 
 <nav>
+
     <div class="logo">
-        <img src="images/logo.png" alt="VicFalls Televivi" />
+        <img src="images/logo.jpeg" alt="VicFalls Televivi">
     </div>
 
-    <ul class="nav-links" id="desktopNavLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#news">Latest News</a></li>
-        <li><a href="index.html#events">Events</a></li>
-        <li><a href="TV & VIDEOS.html">TV & Videos</a></li>
-        <li><a href="index.html#live">Live</a></li>
-        <li><a href="index.html#about">About Us</a></li>
-        <li><a href="index.html#contact">Contact Us</a></li>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Latest News</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Live</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
     </ul>
 
-    <div class="nav-actions desktop-actions" id="desktopNavActions">
+    <div class="nav-actions">
+
         <div class="search-box">
-            <input type="text" placeholder="Search..." />
-            <button><i class="fas fa-search"></i></button>
+            <input type="text" placeholder="Search...">
+            <button>
+                <i class="fas fa-search"></i>
+            </button>
         </div>
-        <a href="login.html" class="login-btn">Login</a>
-        <a href="sign-up.html" class="signup-btn">Sign Up</a>
+
+        <a href="#" class="login-btn">Login</a>
+
+        <a href="#" class="signup-btn">Sign Up</a>
+
     </div>
 
-    <div class="mobile-overlay" id="mobileOverlay">
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#news">Latest News</a></li>
-            <li><a href="index.html#events">Events</a></li>
-            <li><a href="TV & VIDEOS.html">TV & Videos</a></li>
-            <li><a href="index.html#live">Live</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="index.html#contact">Contact Us</a></li>
-        </ul>
-        <div class="nav-actions mobile-actions">
-            <div class="search-box">
-                <input type="text" placeholder="Search..." />
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <a href="login.html" class="login-btn">Login</a>
-            <a href="sign-up.html" class="signup-btn">Sign Up</a>
-        </div>
-    </div>
-
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
 </nav>
     <!-- Breaking News -->
     <section class="breaking-news">
         <div class="breaking-title">
-            Latest Updates
-            <i class="fas fa-bullhorn"></i>
+            BREAKING NEWS
         </div>
 
         <div class="ticker">
@@ -79,19 +58,10 @@
 
     <!-- Hero Section -->
     <section class="hero">
-    <iframe
-        class="hero-video"
-        src="https://www.youtube.com/embed/TH-lWgBoUAM?autoplay=1&mute=1&controls=0&loop=1&playlist=TH-lWgBoUAM&rel=0&modestbranding=1"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
-    </iframe>
-    
-    <div class="hero-overlay"></div>
 
         <div class="hero-content">
 
-            <h1 style="font-size: 50px;">The Voice of Victoria Falls</h1>
+            <h1>The Voice of Victoria Falls</h1>
 
             <p>
                 Bringing you news, stories and events that matter.
@@ -129,7 +99,7 @@
     </section>
 
     <!-- Latest News -->
-    <section class="latest-news" id="news">
+    <section class="latest-news">
 
         <div class="section-top">
 
@@ -177,8 +147,8 @@
         </div>
 
     </section>
-
-    <section class="events" id="events">
+<!--events section-->
+    <section class="events">
 
         <div class="section-top">
 
@@ -187,7 +157,7 @@
                 <p>Don't miss out on these events</p>
             </div>
 
-            <a href="#" class="view-all">View All →</a>
+            <a href="events.html" class="view-all">View All →</a>
 
         </div>
 
@@ -195,27 +165,29 @@
 
             <div class="card">
                 <img src="images/marathon.jpg">
-                <h3>Victoria Falls Marathon</h3>
+                <h3>Victoria <span> Falls Marathon</span></h3>
                 <p>Join us for the annual marathon event attracting athletes from around the world.</p>
+                <a href="#" class="see-more">See More</a>
             </div>
 
             <div class="card">
                 <img src="images/boxing tournment.jpg">
-                <h3>Local Boxing Tournament</h3>
+                <h3>Local <span> Boxing Tournament</span></h3>
                 <p>Witness thrilling boxing matches featuring local talent this weekend.</p>
-                </div>
+                <a href="#" class="see-more">See More</a>
+            </div>
 
             <div class="card">
                 <img src="images/music.jpg">   
-                <h3>Music Festival</h3>
+                <h3>Music <span> Festival</span></h3>
                 <p>Experience live performances from top artists at the Victoria Falls Music Festival.</p>
+                <a href="#" class="see-more">See More</a>
             </div>
             </section>
-    
 
 <!-- Live Section -->
 
-<section class="live-section" id="live">
+<section class="live-section">
 
     <div class="section-top">
 
@@ -279,9 +251,9 @@
 
 </section>
         
-<!--About Us Section -->
+<!--ABOUT SECTION-->
 
-<section class="about-section" id="about">
+<section class="about-section">
 
     <div class="section-top">
 
@@ -335,7 +307,8 @@
             <a href="#" class="about-btn">Learn More</a>
 
         </div>
-    </div>
+
+        <!-- Right Image -->
 
         <div class="about-image">
 
@@ -415,12 +388,12 @@
         <div class="footer-box">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#news">News</a></li>
-                <li><a href="index.html#events">Events</a></li>
-                <li><a href="index.html#live">Live</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#live">Live</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
 
@@ -462,8 +435,6 @@
     </div>
 
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
