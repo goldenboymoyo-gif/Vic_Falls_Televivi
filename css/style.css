@@ -221,32 +221,32 @@ nav {
 .hero-content {
     position: relative;
     z-index: 2;
-    width: 55%;
-    max-width: 720px;
+    width: 52%;
+    max-width: 680px;
     color: white;
 }
 .hero-label {
     display: inline-block;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     color: #ffb347;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 .hero-content h1 {
-    font-size: 72px;
-    margin-bottom: 18px;
+    font-size: 58px;
+    margin-bottom: 16px;
     line-height: 1.08;
     font-weight: 800;
-    letter-spacing: -1px;
+    letter-spacing: -0.8px;
 }
 .hero-content p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 30px;
     color: rgba(255,255,255,0.92);
-    max-width: 580px;
+    max-width: 520px;
 }
 .hero-buttons {
     display: flex;
