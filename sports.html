@@ -4,40 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events-page</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-      <!-- Navigation -->
+
+    <!-- Navigation -->
 
 <nav>
-
     <div class="logo">
-        <img src="images/logo.jpeg" alt="VicFalls Televivi">
+        <img src="images/logo.png" alt="VicFalls Televivi" />
     </div>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="desktopNavLinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">Latest News</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Live</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="index.html#news">Latest News</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="TV & VIDEOS.html">TV & Videos</a></li>
+        <li><a href="index.html#live">Live</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
     </ul>
 
-    <div class="nav-actions">
-
+    <div class="nav-actions desktop-actions" id="desktopNavActions">
         <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <button>
-                <i class="fas fa-search"></i>
-            </button>
+            <input type="text" placeholder="Search..." />
+            <button><i class="fas fa-search"></i></button>
         </div>
-
-        <a href="#" class="login-btn">Login</a>
-
-        <a href="#" class="signup-btn">Sign Up</a>
-
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="sign-up.html" class="signup-btn">Sign Up</a>
     </div>
+
+    <div class="mobile-overlay" id="mobileOverlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#news">Latest News</a></li>
+            <li><a href="index.html#events">Events</a></li>
+            <li><a href="TV & VIDEOS.html">TV & Videos</a></li>
+            <li><a href="index.html#live">Live</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions mobile-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="sign-up.html" class="signup-btn">Sign Up</a>
+        </div>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </nav>
 
 <!-- The begining of the events page -->
@@ -121,5 +144,6 @@
     
     <!--the end of the events section -->
     
+<script src="script.js"></script>
 </body>
 </html>

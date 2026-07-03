@@ -813,7 +813,49 @@ nav {
 
 /* Events */
 
-/* Events */
+.all-section{
+    padding: 60px 5% 80px;
+}
+
+.event-filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 18px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 0 36px;
+    padding: 0;
+}
+.event-filters a{
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 6px 0;
+    transition: 0.3s;
+}
+.event-filters a:hover{
+    color: #d00000;
+}
+
+.video-section{
+    padding: 60px 5% 80px;
+}
+.video-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.video-container .card iframe{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+}
+
 .events{
     padding:100px 8%;
     padding-top:50px;
