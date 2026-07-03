@@ -250,14 +250,25 @@
             if (!videoId) return;
             const container = heroPlaceholder.parentElement;
             const iframe = createHeroIframe(videoId);
-            // Remove placeholder and insert iframe
             container.insertBefore(iframe, container.firstChild);
             heroPlaceholder.style.display = 'none';
+
+            iframe.addEventListener('load', function() {
+                heroPlaceholder.style.display = 'none';
+            });
+
+            setTimeout(function() {
+                heroPlaceholder.style.display = 'none';
+            }, 400);
         }
 
         heroPlaceholder.addEventListener('click', playHeroVideo);
         heroPlaceholder.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') playHeroVideo();
+        });
+
+        window.addEventListener('load', function() {
+            playHeroVideo();
         });
     }
 
