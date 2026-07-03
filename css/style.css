@@ -810,58 +810,6 @@ nav {
     padding:100px 8%;
     padding-top:50px;
 }
-
-.all-section{
-    padding: 60px 5% 80px;
-}
-
-.events-heading{
-    max-width: 760px;
-    margin: 0 auto 32px;
-    text-align: center;
-}
-
-.events-heading h1{
-    font-size: 2.5rem;
-    margin-bottom: 12px;
-    color: #111;
-}
-
-.events-heading h1 span{
-    color: #d00000;
-}
-
-.events-heading p{
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #666;
-    margin: 0;
-}
-
-.event-filters{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px 18px;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0 0 36px;
-    padding: 0;
-}
-
-.event-filters a{
-    text-decoration: none;
-    color: #333;
-    font-size: 0.95rem;
-    font-weight: 600;
-    padding: 6px 0;
-    transition: 0.3s;
-}
-
-.event-filters a:hover{
-    color: #d00000;
-}
-
 .section-top{
     display:flex;
     justify-content:space-between;
@@ -882,98 +830,13 @@ nav {
 }
 .events-container{
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:30px;
-}
-
-@media (max-width:1000px){
-    .events-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width:600px){
-    .events-container{
-        grid-template-columns: repeat(1, 1fr);
-    }
 }
 .card p{
     padding:0 20px 20px;
     line-height:1.6;
     margin-top:0px;
-}
-.see-more{
-    display:inline-block;
-    margin:0 20px 20px;
-    text-decoration:none;
-    color:red;
-    padding:12px 25px;
-    border-radius:5px;
-    transition:.3s;
-}
-
-.see-more:hover{
-    background:red;
-    color:white;
-    transform: translateY(-5px);
-}
-
-.card h3 span{
-    margin:0;
-    padding:0;
-    background:white;
-    color:red;
-}
-
-.upcoming-events{
-    padding: 20px;
-    margin: 15px;
-}
-
-.card{
-    display:grid; 
-    margin-top: 20px;  
-}
-.nav{
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
-body {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-.featured-video {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    padding: 60px 8%;
-    background: #111;
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 40px auto 50px;
-    padding-bottom: 56.25%; /* 16:9 ratio */
-    height: 0;
-}
-
-.video-container iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 15px;
-    display: block;
 }
 
 /*LIVE SECTION*/
