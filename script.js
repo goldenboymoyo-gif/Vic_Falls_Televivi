@@ -228,49 +228,9 @@
     }
 
     // ============================================================
-    // HERO VIDEO - play overlay fallback for autoplay reliability
+    // HERO VIDEO - direct iframe background
     // ============================================================
-    const heroPlaceholder = document.querySelector('.hero-video-placeholder');
-    if (heroPlaceholder) {
-        function createHeroIframe(videoId) {
-            const iframe = document.createElement('iframe');
-            iframe.className = 'hero-video';
-            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1';
-            iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
-            iframe.setAttribute('allowfullscreen', '');
-            iframe.loading = 'eager';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.border = '0';
-            return iframe;
-        }
-
-        function playHeroVideo() {
-            const videoId = heroPlaceholder.dataset.videoId;
-            if (!videoId) return;
-            const container = heroPlaceholder.parentElement;
-            const iframe = createHeroIframe(videoId);
-            container.insertBefore(iframe, container.firstChild);
-            heroPlaceholder.style.display = 'none';
-
-            iframe.addEventListener('load', function() {
-                heroPlaceholder.style.display = 'none';
-            });
-
-            setTimeout(function() {
-                heroPlaceholder.style.display = 'none';
-            }, 400);
-        }
-
-        heroPlaceholder.addEventListener('click', playHeroVideo);
-        heroPlaceholder.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') playHeroVideo();
-        });
-
-        window.addEventListener('load', function() {
-            playHeroVideo();
-        });
-    }
+    // No JS is required for the hero background video; the iframe is embedded in HTML.
 
     // ============================================================
     // CATEGORY FILTERS
