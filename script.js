@@ -1,146 +1,142 @@
 (function() {
+    // ============================================================
+    // MOBILE MENU TOGGLE
+    // ============================================================
     const hamburger = document.getElementById('hamburger');
     const mobileOverlay = document.getElementById('mobileOverlay');
 
-    // Toggle menu on hamburger click
-    hamburger.addEventListener('click', function(e) {
-        e.stopPropagation();
-        mobileOverlay.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-
-    // Close menu when a link inside the overlay is clicked
-    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileOverlay.classList.remove('active');
-            hamburger.classList.remove('active');
+    if (hamburger && mobileOverlay) {
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileOverlay.classList.toggle('active');
+            hamburger.classList.toggle('active');
         });
-    });
 
-    // Close menu when clicking outside the overlay (on the background)
-    document.addEventListener('click', function(e) {
-        const isOverlay = mobileOverlay.contains(e.target);
-        const isHamburger = hamburger.contains(e.target);
-        if (!isOverlay && !isHamburger && mobileOverlay.classList.contains('active')) {
-            mobileOverlay.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-    });
-
-    // Close menu on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && mobileOverlay.classList.contains('active')) {
-            mobileOverlay.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-    });
-})();
-
-
-
-(function() {
-    // ============================================================
-    // VIDEO MODAL (Placeholder)
-    // ============================================================
-    const modal = document.getElementById('videoModal');
-    const closeModal = document.getElementById('closeModal');
-    const allCards = document.querySelectorAll('.video-card');
-
-    allCards.forEach(card => {
-        card.addEventListener('click', function() {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+        const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileOverlay.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
         });
-    });
 
-    function closeVideoModal() {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
+        document.addEventListener('click', function(e) {
+            const isOverlay = mobileOverlay.contains(e.target);
+            const isHamburger = hamburger.contains(e.target);
+            if (!isOverlay && !isHamburger && mobileOverlay.classList.contains('active')) {
+                mobileOverlay.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileOverlay.classList.contains('active')) {
+                mobileOverlay.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
     }
 
-    closeModal.addEventListener('click', closeVideoModal);
-    modal.addEventListener('click', function(e) {
-        if (e.target === this) closeVideoModal();
-    });
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeVideoModal();
-        }
-    });
-
     // ============================================================
-    // CATEGORY FILTERS – FIXED
+    // BACK TO TOP BUTTON
     // ============================================================
-    const filterBtns = document.querySelectorAll('.filter-btn');
-
-    // Helper: apply filter to all cards
-    function applyFilter(filterValue) {
-        allCards.forEach(card => {
-            const category = card.dataset.category;
-            // Show if "all" or category matches
-            if (filterValue === 'all' || category === filterValue) {
-                card.style.display = 'block';
-                card.style.opacity = '1';
-                card.style.visibility = 'visible';
-                card.style.transform = 'scale(1)';
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('show');
             } else {
-                card.style.display = 'none';
-                card.style.opacity = '0';
-                card.style.visibility = 'hidden';
-                card.style.transform = 'scale(0.95)';
+                backToTop.classList.remove('show');
             }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
-    // Add click listeners to filter buttons
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Update active button
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
+    // ============================================================
+    // SEARCH FUNCTIONALITY
+    // ============================================================
+    function performSearch(searchTerm) {
+        if (!searchTerm.trim()) return;
+        const q = searchTerm.trim().toLowerCase();
+        if (q.includes('news') || q.includes('latest') || q.includes('headline') || q.includes('story')) {
+            window.location.href = 'news.html';
+        } else if (q.includes('event') || q.includes('upcoming') || q.includes('calendar')) {
+            window.location.href = 'events.html';
+        } else if (q.includes('live') || q.includes('broadcast') || q.includes('stream')) {
+            window.location.href = 'live.html';
+        } else if (q.includes('video') || q.includes('tv') || q.includes('watch') || q.includes('gallery')) {
+            window.location.href = 'tv.html';
+        } else if (q.includes('about') || q.includes('who') || q.includes('team') || q.includes('mission')) {
+            window.location.href = 'about.html';
+        } else if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('address')) {
+            window.location.href = 'contact.html';
+        } else if (q.includes('sport') || q.includes('boxing') || q.includes('marathon') || q.includes('football')) {
+            window.location.href = 'events.html';
+        } else if (q.includes('tour') || q.includes('visit') || q.includes('falls') || q.includes('travel')) {
+            window.location.href = 'tv.html';
+        } else {
+            window.location.href = 'news.html';
+        }
+    }
 
-            // Get filter value
-            const filter = this.dataset.filter;
-            applyFilter(filter);
+    const searchBtns = document.querySelectorAll('.search-box button');
+    searchBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const input = this.parentElement.querySelector('input');
+            if (input) performSearch(input.value);
         });
     });
 
-    // ============================================================
-    // OPTIONAL: "View All" buttons – reset to "ALL VIDEOS"
-    // ============================================================
-    const viewAllLinks = document.querySelectorAll('.view-all');
-    viewAllLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Find the "ALL VIDEOS" button and click it
-            const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-            if (allBtn) {
-                allBtn.click();
-                // Scroll to top of videos section
-                document.querySelector('.videos-section').scrollIntoView({ behavior: 'smooth' });
+    const searchInputs = document.querySelectorAll('.search-box input');
+    searchInputs.forEach(input => {
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                performSearch(this.value);
             }
         });
     });
 
     // ============================================================
-    // ENSURE FILTER WORKS AFTER PAGE LOAD (safety)
+    // CONTACT FORM HANDLER
     // ============================================================
-    // Initially show all videos (if any filter was previously applied)
-    setTimeout(() => {
-        const activeBtn = document.querySelector('.filter-btn.active');
-        if (activeBtn) {
-            applyFilter(activeBtn.dataset.filter);
-        } else {
-            applyFilter('all');
-        }
-    }, 100);
+    const contactForms = document.querySelectorAll('#contactForm');
+    contactForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.querySelector('input[placeholder="Full Name"]');
+            const email = this.querySelector('input[type="email"]');
+            const message = this.querySelector('textarea');
+            let valid = true;
+            let errorMsg = '';
 
-})();
+            if (name && !name.value.trim()) {
+                errorMsg += 'Please enter your name.\n';
+                valid = false;
+            }
+            if (email && !email.value.trim()) {
+                errorMsg += 'Please enter your email.\n';
+                valid = false;
+            } else if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+                errorMsg += 'Please enter a valid email address.\n';
+                valid = false;
+            }
+            if (message && !message.value.trim()) {
+                errorMsg += 'Please enter your message.\n';
+                valid = false;
+            }
 
+            if (valid) {
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            } else {
+                alert(errorMsg);
+            }
+        });
+    });
 
-
-(function() {
     // ============================================================
     // VIDEO MODAL – YouTube
     // ============================================================
@@ -148,79 +144,93 @@
     const modalIframe = document.getElementById('modalIframe');
     const closeModal = document.getElementById('closeModal');
 
-    // All video cards (featured + small)
-    const allCards = document.querySelectorAll('.video-card, .featured-card');
+    if (modal && modalIframe && closeModal) {
+        const allCards = document.querySelectorAll('.video-card, .featured-card');
 
-    // Open modal with YouTube video
-    allCards.forEach(card => {
-        card.addEventListener('click', function() {
-            const videoId = this.dataset.videoId;
-            if (!videoId) return;
-            modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    // Close modal
-    function closeVideoModal() {
-        modal.classList.remove('active');
-        modalIframe.src = ''; // stop video
-        document.body.style.overflow = '';
-    }
-
-    closeModal.addEventListener('click', closeVideoModal);
-    modal.addEventListener('click', function(e) {
-        if (e.target === this) closeVideoModal();
-    });
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeVideoModal();
-        }
-    });
-
-    // ============================================================
-    // CATEGORY FILTERS
-    // ============================================================
-    const filterBtns = document.querySelectorAll('.filter-btn');
-
-    function applyFilter(filterValue) {
         allCards.forEach(card => {
-            const category = card.dataset.category;
-            if (filterValue === 'all' || category === filterValue) {
-                card.style.display = '';
-                card.style.opacity = '1';
-                card.style.visibility = 'visible';
-                card.style.transform = '';
-            } else {
-                card.style.display = 'none';
-                card.style.opacity = '0';
-                card.style.visibility = 'hidden';
-                card.style.transform = 'scale(0.95)';
+            card.addEventListener('click', function() {
+                const videoId = this.dataset.videoId;
+                if (!videoId) return;
+                modalIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeVideoModal() {
+            modal.classList.remove('active');
+            modalIframe.src = '';
+            document.body.style.overflow = '';
+        }
+
+        closeModal.addEventListener('click', closeVideoModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) closeVideoModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeVideoModal();
             }
         });
     }
 
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            applyFilter(this.dataset.filter);
+    // ============================================================
+    // CATEGORY FILTERS (for events & tv pages)
+    // ============================================================
+    function setupFilters(containerSelector, cardSelector) {
+        const filterBtns = document.querySelectorAll(containerSelector + ' .filter-btn');
+        const allCards = document.querySelectorAll(cardSelector);
+        if (!filterBtns.length || !allCards.length) return;
+
+        function applyFilter(filterValue) {
+            allCards.forEach(card => {
+                const category = card.dataset.category;
+                if (filterValue === 'all' || category === filterValue) {
+                    card.style.display = '';
+                    card.style.opacity = '1';
+                    card.style.visibility = 'visible';
+                    card.style.transform = '';
+                } else {
+                    card.style.display = 'none';
+                    card.style.opacity = '0';
+                    card.style.visibility = 'hidden';
+                    card.style.transform = 'scale(0.95)';
+                }
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                applyFilter(this.dataset.filter);
+            });
+        });
+
+        setTimeout(function() {
+            const activeBtn = document.querySelector(containerSelector + ' .filter-btn.active');
+            if (activeBtn) {
+                applyFilter(activeBtn.dataset.filter);
+            } else {
+                applyFilter('all');
+            }
+        }, 100);
+    }
+
+    setupFilters('.event-filters', '.all-events .card');
+    setupFilters('.category-filters', '.video-card');
+
+    // ============================================================
+    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // ============================================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     });
 
-    // Ensure initial state shows all
-    setTimeout(() => {
-        const activeBtn = document.querySelector('.filter-btn.active');
-        if (activeBtn) {
-            applyFilter(activeBtn.dataset.filter);
-        } else {
-            applyFilter('all');
-        }
-    }, 100);
-
 })();
-
-
-
-

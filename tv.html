@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - VicFalls Televivi</title>
+    <title>TV & Videos - VicFalls Televivi</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -15,9 +15,9 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="news.html">Latest News</a></li>
         <li><a href="events.html">Events</a></li>
-        <li><a href="tv.html">TV & Videos</a></li>
+        <li><a href="tv.html" class="active">TV & Videos</a></li>
         <li><a href="live.html">Live</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
     </ul>
     <div class="nav-actions desktop-actions">
@@ -47,67 +47,71 @@
 </nav>
 
 <section class="page-banner">
-    <h1>About VicFalls Televivi</h1>
-    <p>The story behind the voice of Victoria Falls</p>
+    <h1>TV & Videos</h1>
+    <p>Watch videos and coverage from Victoria Falls</p>
 </section>
 
-<section class="about-full">
-    <div class="about-container">
-        <div class="about-content">
-            <h3>The Voice of Victoria Falls</h3>
-            <p>VicFalls Televivi is a digital media platform dedicated to delivering trusted news, sports, entertainment, tourism and community stories from Victoria Falls and beyond. Through quality journalism and engaging storytelling, we strive to inform, educate and connect communities.</p>
-            <p>Founded with a vision to give Victoria Falls a dedicated media voice, our team of passionate journalists and content creators works tirelessly to bring you the stories that matter. From covering local events to investigating issues that affect the community, we are committed to excellence in journalism.</p>
-            <p>We are committed to providing timely coverage of events and creating a platform that showcases the people, culture and opportunities of Victoria Falls to Zimbabwe, Africa and the world.</p>
-            <div class="about-stats">
-                <div class="stat-box">
-                    <h4>500+</h4>
-                    <span>Stories Covered</span>
-                </div>
-                <div class="stat-box">
-                    <h4>100+</h4>
-                    <span>Events Broadcast</span>
-                </div>
-                <div class="stat-box">
-                    <h4>50K+</h4>
-                    <span>Viewers Reached</span>
-                </div>
-                <div class="stat-box">
-                    <h4>10+</h4>
-                    <span>Team Members</span>
-                </div>
+<section class="tv-section">
+    <div class="category-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="news">News</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="tourism">Tourism</button>
+        <button class="filter-btn" data-filter="interviews">Interviews</button>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-card" data-category="tourism" data-video-id="FVFsiJBSQps">
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/FVFsiJBSQps/maxresdefault.jpg" alt="Victoria Falls">
+                <span class="duration">2:55</span>
+            </div>
+            <div class="video-info">
+                <h4>Victoria Falls Devil's Pool Experience</h4>
+                <div class="video-meta"><span><i class="fas fa-eye"></i> 16M views</span><span><i class="fas fa-calendar"></i> 2024</span></div>
             </div>
         </div>
-        <div class="about-image">
-            <img src="images/About us.png" alt="About VicFalls Televivi">
+        <div class="video-card" data-category="tourism" data-video-id="OoyJLKikeoQ">
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/OoyJLKikeoQ/maxresdefault.jpg" alt="Victoria Falls Guide">
+                <span class="duration">16:07</span>
+            </div>
+            <div class="video-info">
+                <h4>Victoria Falls Zimbabwe - Ultimate Guide</h4>
+                <div class="video-meta"><span><i class="fas fa-eye"></i> 1.7K views</span><span><i class="fas fa-calendar"></i> 2023</span></div>
+            </div>
+        </div>
+        <div class="video-card" data-category="tourism" data-video-id="6F416m-Z4f8">
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/6F416m-Z4f8/maxresdefault.jpg" alt="Victoria Falls Power">
+                <span class="duration">4:44</span>
+            </div>
+            <div class="video-info">
+                <h4>Witnessing the Power of Victoria Falls</h4>
+                <div class="video-meta"><span><i class="fas fa-eye"></i> 5.9K views</span><span><i class="fas fa-calendar"></i> 2025</span></div>
+            </div>
+        </div>
+        <div class="video-card" data-category="events" data-video-id="GsoX_8CafN4">
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/GsoX_8CafN4/maxresdefault.jpg" alt="Vic Falls Carnival">
+                <span class="duration">2:30</span>
+            </div>
+            <div class="video-info">
+                <h4>Vic Falls Carnival Highlights</h4>
+                <div class="video-meta"><span><i class="fas fa-eye"></i> 50K views</span><span><i class="fas fa-calendar"></i> 2019</span></div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="about-values">
-    <h2>Our Values</h2>
-    <div class="values-grid">
-        <div class="value-card">
-            <i class="fas fa-handshake"></i>
-            <h3>Integrity</h3>
-            <p>We uphold the highest standards of journalistic integrity and ethical reporting.</p>
-        </div>
-        <div class="value-card">
-            <i class="fas fa-users"></i>
-            <h3>Community</h3>
-            <p>We are deeply rooted in the Victoria Falls community and serve its people.</p>
-        </div>
-        <div class="value-card">
-            <i class="fas fa-lightbulb"></i>
-            <h3>Innovation</h3>
-            <p>We embrace digital innovation to deliver news in modern, accessible ways.</p>
-        </div>
-        <div class="value-card">
-            <i class="fas fa-globe-africa"></i>
-            <h3>Impact</h3>
-            <p>We strive to make a positive impact through stories that inspire change.</p>
+<div class="video-modal" id="videoModal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <div class="modal-video-wrapper">
+            <iframe id="modalIframe" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
     </div>
-</section>
+</div>
 
 <footer class="footer">
     <div class="footer-container">
