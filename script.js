@@ -1,4 +1,6 @@
 (function() {
+    'use strict';
+
     // ============================================================
     // MOBILE MENU TOGGLE
     // ============================================================
@@ -10,6 +12,7 @@
             e.stopPropagation();
             mobileOverlay.classList.toggle('active');
             hamburger.classList.toggle('active');
+            document.body.style.overflow = mobileOverlay.classList.contains('active') ? 'hidden' : '';
         });
 
         const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
@@ -17,6 +20,7 @@
             link.addEventListener('click', function() {
                 mobileOverlay.classList.remove('active');
                 hamburger.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
 
@@ -26,6 +30,7 @@
             if (!isOverlay && !isHamburger && mobileOverlay.classList.contains('active')) {
                 mobileOverlay.classList.remove('active');
                 hamburger.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
 
@@ -33,8 +38,34 @@
             if (e.key === 'Escape' && mobileOverlay.classList.contains('active')) {
                 mobileOverlay.classList.remove('active');
                 hamburger.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
+    }
+
+    // ============================================================
+    // AUTO-HIDE NAVBAR ON SCROLL
+    // ============================================================
+    const nav = document.querySelector('nav');
+    if (nav) {
+        let lastScroll = 0;
+        let ticking = false;
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const currentScroll = window.pageYOffset;
+                    if (currentScroll > 80 && currentScroll > lastScroll) {
+                        nav.style.transform = 'translateY(-100%)';
+                    } else {
+                        nav.style.transform = 'translateY(0)';
+                    }
+                    lastScroll = currentScroll;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
     }
 
     // ============================================================
@@ -48,7 +79,7 @@
             } else {
                 backToTop.classList.remove('show');
             }
-        });
+        }, { passive: true });
 
         backToTop.addEventListener('click', function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -56,30 +87,41 @@
     }
 
     // ============================================================
+    // SCROLL PROGRESS BAR
+    // ============================================================
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress';
+    progressBar.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#d00000,#ff4d4d);z-index:10001;transition:width 0.1s;width:0;';
+    document.body.appendChild(progressBar);
+
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        progressBar.style.width = scrollPercent + '%';
+    }, { passive: true });
+
+    // ============================================================
     // SEARCH FUNCTIONALITY
     // ============================================================
     function performSearch(searchTerm) {
         if (!searchTerm.trim()) return;
         const q = searchTerm.trim().toLowerCase();
-        if (q.includes('news') || q.includes('latest') || q.includes('headline') || q.includes('story')) {
-            window.location.href = 'news.html';
-        } else if (q.includes('event') || q.includes('upcoming') || q.includes('calendar')) {
-            window.location.href = 'events.html';
-        } else if (q.includes('live') || q.includes('broadcast') || q.includes('stream')) {
-            window.location.href = 'live.html';
-        } else if (q.includes('video') || q.includes('tv') || q.includes('watch') || q.includes('gallery')) {
-            window.location.href = 'tv.html';
-        } else if (q.includes('about') || q.includes('who') || q.includes('team') || q.includes('mission')) {
-            window.location.href = 'about.html';
-        } else if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('address')) {
-            window.location.href = 'contact.html';
-        } else if (q.includes('sport') || q.includes('boxing') || q.includes('marathon') || q.includes('football')) {
-            window.location.href = 'events.html';
-        } else if (q.includes('tour') || q.includes('visit') || q.includes('falls') || q.includes('travel')) {
-            window.location.href = 'tv.html';
-        } else {
-            window.location.href = 'news.html';
+        const routes = {
+            'news': ['news', 'latest', 'headline', 'story'],
+            'events': ['event', 'upcoming', 'calendar', 'boxing', 'marathon', 'football', 'sport'],
+            'live': ['live', 'broadcast', 'stream'],
+            'tv.html': ['video', 'tv', 'watch', 'gallery', 'tour', 'visit', 'falls', 'travel'],
+            'about': ['about', 'who', 'team', 'mission'],
+            'contact': ['contact', 'email', 'phone', 'address']
+        };
+        for (const [page, keywords] of Object.entries(routes)) {
+            if (keywords.some(k => q.includes(k))) {
+                window.location.href = page + '.html';
+                return;
+            }
         }
+        window.location.href = 'news.html';
     }
 
     const searchBtns = document.querySelectorAll('.search-box button');
@@ -93,9 +135,7 @@
     const searchInputs = document.querySelectorAll('.search-box input');
     searchInputs.forEach(input => {
         input.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
-                performSearch(this.value);
-            }
+            if (e.key === 'Enter') performSearch(this.value);
         });
     });
 
@@ -109,6 +149,7 @@
             const name = this.querySelector('input[placeholder="Full Name"]');
             const email = this.querySelector('input[type="email"]');
             const message = this.querySelector('textarea');
+            const select = this.querySelector('select');
             let valid = true;
             let errorMsg = '';
 
@@ -127,10 +168,22 @@
                 errorMsg += 'Please enter your message.\n';
                 valid = false;
             }
+            if (select && !select.value) {
+                errorMsg += 'Please select a request type.\n';
+                valid = false;
+            }
 
             if (valid) {
-                alert('Thank you for your message! We will get back to you soon.');
-                this.reset();
+                const btn = this.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                btn.disabled = true;
+                setTimeout(function() {
+                    alert('Thank you for your message! We will get back to you within 24 hours.');
+                    form.reset();
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 1200);
             } else {
                 alert(errorMsg);
             }
@@ -138,20 +191,20 @@
     });
 
     // ============================================================
-    // VIDEO MODAL – YouTube
+    // VIDEO MODAL
     // ============================================================
     const modal = document.getElementById('videoModal');
     const modalIframe = document.getElementById('modalIframe');
     const closeModal = document.getElementById('closeModal');
 
     if (modal && modalIframe && closeModal) {
-        const allCards = document.querySelectorAll('.video-card, .featured-card');
+        const allCards = document.querySelectorAll('.video-card');
 
         allCards.forEach(card => {
             card.addEventListener('click', function() {
                 const videoId = this.dataset.videoId;
                 if (!videoId) return;
-                modalIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+                modalIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
             });
@@ -175,7 +228,7 @@
     }
 
     // ============================================================
-    // CATEGORY FILTERS (for events & tv pages)
+    // CATEGORY FILTERS
     // ============================================================
     function setupFilters(containerSelector, cardSelector) {
         const filterBtns = document.querySelectorAll(containerSelector + ' .filter-btn');
@@ -183,7 +236,7 @@
         if (!filterBtns.length || !allCards.length) return;
 
         function applyFilter(filterValue) {
-            allCards.forEach(card => {
+            allCards.forEach((card, index) => {
                 const category = card.dataset.category;
                 if (filterValue === 'all' || category === filterValue) {
                     card.style.display = '';
@@ -221,16 +274,28 @@
     setupFilters('.category-filters', '.video-card');
 
     // ============================================================
-    // NEWSLETTER FORM HANDLER
+    // NEWSLETTER FORM
     // ============================================================
     const newsletterForms = document.querySelectorAll('.newsletter-form');
     newsletterForms.forEach(function(form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            var input = this.querySelector('input[type="email"]');
+            const input = this.querySelector('input[type="email"]');
             if (input && input.value.trim()) {
-                alert('Thank you for subscribing! Stay tuned for updates.');
-                this.reset();
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+                const btn = this.querySelector('button');
+                const originalHtml = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                btn.disabled = true;
+                setTimeout(function() {
+                    alert('Thank you for subscribing! Stay tuned for our latest stories.');
+                    form.reset();
+                    btn.innerHTML = originalHtml;
+                    btn.disabled = false;
+                }, 1000);
             }
         });
     });
@@ -272,6 +337,40 @@
     } else {
         revealElements.forEach(function(el) {
             el.classList.add('visible');
+        });
+    }
+
+    // ============================================================
+    // COUNTER ANIMATION FOR STATS
+    // ============================================================
+    const statNumbers = document.querySelectorAll('.about-stats .stat-box h4, .hero-stats strong');
+    if (statNumbers.length && 'IntersectionObserver' in window) {
+        const counterObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const text = el.textContent.trim();
+                    const num = parseInt(text.replace(/[^0-9]/g, ''));
+                    if (!isNaN(num) && num > 0) {
+                        const suffix = text.replace(/[0-9]/g, '');
+                        let current = 0;
+                        const step = Math.max(1, Math.floor(num / 40));
+                        const timer = setInterval(function() {
+                            current += step;
+                            if (current >= num) {
+                                current = num;
+                                clearInterval(timer);
+                            }
+                            el.textContent = current.toLocaleString() + suffix;
+                        }, 30);
+                    }
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNumbers.forEach(function(el) {
+            counterObserver.observe(el);
         });
     }
 
