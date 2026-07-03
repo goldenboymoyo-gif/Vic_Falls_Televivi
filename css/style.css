@@ -577,10 +577,11 @@ nav {
   align-items: center;
   overflow: hidden;
   z-index: 2;
-  border-radius: var(--radius-lg);
   border-left: 4px solid var(--primary);
   box-shadow: var(--shadow-lg);
   transition: var(--transition);
+  height: 90px;
+  width: 348px;
 }
 
 .advert-card:hover {
@@ -589,12 +590,12 @@ nav {
 }
 
 .advert-content {
-  padding: 8px 10px;
+  padding: 6px 8px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 4px;
+  justify-content: space-between;
+  gap: 3px;
 }
 
 .advert-content h3 {
@@ -602,16 +603,17 @@ nav {
   font-weight: 800;
   color: var(--primary);
   margin: 0;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
 }
 
 .advert-content p {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--gray-700);
   margin: 0;
-  line-height: 1.4;
-  max-width: 156px;
+  line-height: 1.3;
+  max-width: 150px;
+  overflow-wrap: anywhere;
 }
 
 .advert-btn {
@@ -621,13 +623,14 @@ nav {
   background: var(--black);
   color: var(--white);
   text-decoration: none;
-  padding: 8px 14px;
+  padding: 6px 10px;
   border-radius: var(--radius-sm);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   transition: var(--transition);
   width: fit-content;
+  min-width: 0;
 }
 
 .advert-btn:hover {
