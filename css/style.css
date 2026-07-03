@@ -118,6 +118,14 @@ nav {
   overflow: hidden;
 }
 
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .hero-video-placeholder {
   position: relative;
   width: 100%;
@@ -564,11 +572,11 @@ nav {
 
 .advert-card {
   position: absolute;
-  bottom: 26px;
-  right: 60px;
-  width: 320px;
-  min-height: 96px;
-  background: rgba(255,255,255,0.96);
+  bottom: 24px;
+  right: 40px;
+  width: 260px;
+  min-height: 88px;
+  background: rgba(255,255,255,0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
@@ -583,20 +591,20 @@ nav {
 
 .advert-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
 }
 
 .advert-content {
-  padding: 16px 16px;
+  padding: 12px 14px;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .advert-content h3 {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   color: var(--primary);
   margin: 0;
@@ -605,11 +613,11 @@ nav {
 }
 
 .advert-content p {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--gray-700);
   margin: 0;
   line-height: 1.4;
-  max-width: 184px;
+  max-width: 168px;
 }
 
 .advert-btn {
@@ -634,16 +642,16 @@ nav {
 }
 
 .advert-image {
-  width: 96px;
-  min-height: 96px;
+  width: 82px;
+  min-height: 88px;
   flex-shrink: 0;
 }
 
 .advert-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 12px;
+  object-fit: cover;
+  padding: 10px;
   background: transparent;
 }
 
