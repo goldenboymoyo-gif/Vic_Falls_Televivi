@@ -489,8 +489,9 @@ nav {
   right: 60px;
   width: 300px;
   background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 72px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -502,29 +503,29 @@ nav {
 }
 
 .advert-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.28);
 }
 
 .advert-content {
-  padding: 20px 22px;
+  padding: 10px 14px;
   flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .advert-content h3 {
   font-size: 12px;
   font-weight: 800;
   color: var(--primary);
-  margin-bottom: 4px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.6px;
+  text-transform: none;
 }
 
 .advert-content p {
-  font-size: 13px;
-  color: var(--gray-600);
-  margin-bottom: 10px;
-  line-height: 1.5;
+  display: none;
 }
 
 .advert-btn {
@@ -532,11 +533,11 @@ nav {
   background: var(--black);
   color: var(--white);
   text-decoration: none;
-  padding: 8px 20px;
+  padding: 6px 12px;
   border-radius: var(--radius-sm);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   transition: var(--transition);
 }
 
@@ -546,8 +547,8 @@ nav {
 }
 
 .advert-image {
-  width: 110px;
-  height: 100%;
+  width: 92px;
+  height: 72px;
   flex-shrink: 0;
 }
 
@@ -1181,12 +1182,16 @@ nav {
 }
 
 .footer .social-links a {
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
   background: rgba(255,255,255,0.06);
   color: var(--white);
-  border-radius: 50%;
+  border-radius: 8px;
   font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
 }
 
 .footer .social-links a:hover {
@@ -1199,8 +1204,8 @@ nav {
   margin-top: 18px;
   background: var(--primary);
   color: var(--white);
-  padding: 13px 28px;
-  border-radius: var(--radius-full);
+  padding: 10px 18px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
@@ -1259,10 +1264,10 @@ nav {
 }
 
 .footer-bottom {
-  margin-top: 60px;
+  margin-top: 48px;
   border-top: 1px solid rgba(255,255,255,0.06);
   text-align: center;
-  padding: 24px 10px;
+  padding: 18px 10px;
 }
 
 .footer-bottom p {
@@ -2208,9 +2213,11 @@ nav {
   .advert-card {
     width: 300px;
     right: 40px;
+    height: 72px;
   }
   .advert-image {
-    width: 100px;
+    width: 90px;
+    height: 72px;
   }
   .nav-links {
     gap: 22px;
@@ -2259,9 +2266,11 @@ nav {
     width: 260px;
     right: 20px;
     bottom: 20px;
+    height: 72px;
   }
   .advert-image {
-    width: 90px;
+    width: 82px;
+    height: 72px;
   }
   .latest-news,
   .events,
