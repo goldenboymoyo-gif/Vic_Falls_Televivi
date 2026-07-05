@@ -81,6 +81,8 @@
         <!-- Category Filters -->
         <div class="category-filters">
             <button class="filter-btn active" data-filter="all">ALL VIDEOS</button>
+            <button class="filter-btn" data-filter="news">NEWS</button>
+            <button class="filter-btn" data-filter="sports">SPORTS</button>
             <button class="filter-btn" data-filter="music">MUSIC</button>
             <button class="filter-btn" data-filter="interview">INTERVIEWS</button>
             <button class="filter-btn" data-filter="documentary">DOCUMENTARY</button>
@@ -90,34 +92,244 @@
 
         <!-- ===== FEATURED VIDEO (BIG CARD) ===== -->
         <div class="featured-row">
-            <div class="featured-card" data-category="interview" data-video-id="ZMnFUL1UA9g">
+            <div class="featured-card" data-category="news" data-video-id="6BZi0JUP1Y4">
                 <div class="featured-thumbnail">
-                    <img src="https://img.youtube.com/vi/ZMnFUL1UA9g/mqdefault.jpg" alt="BigBoi Huncho shares his journey" loading="lazy" />
+                    <img src="https://img.youtube.com/vi/6BZi0JUP1Y4/hqdefault.jpg" alt="Choose Purpose Over Pressure" loading="lazy" />
                     <div class="featured-play-btn"><i class="fas fa-play-circle"></i></div>
-                    <span class="featured-duration">30:00</span>
+                    <span class="featured-duration">1:30</span>
                 </div>
                 <div class="featured-info">
                     <span class="featured-badge">FEATURED</span>
-                    <h2>BigBoi Huncho shares his journey, struggles, passion &amp; music vision</h2>
-                    <p>Such an inspiring conversation with Zimiso Mbuyazwe, popularly known as BigBoi Huncho, on the Downtown Playlist Podcast at Vic Falls Televivi! From Chinotimba roots to chasing greatness through music.[reference:0]</p>
+                    <h2>"Choose Purpose Over Pressure" — Chief Mvuthu Urges Youth</h2>
+                    <p>Chief Mvuthu has called on young people to rise above peer pressure and make choices that protect their dreams and future. Addressing youths during the Youth Day commemorations, the Chief highlighted that saying no to substance abuse is an act of courage and leadership.</p>
                     <div class="featured-meta">
-                        <span><i class="far fa-calendar-alt"></i> May 27, 2026</span>
-                        <span><i class="far fa-eye"></i> 32 Views</span>
-                        <span><i class="far fa-clock"></i> 30:00</span>
+                        <span><i class="far fa-calendar-alt"></i> Jun 25, 2026</span>
+                        <span><i class="far fa-eye"></i> 5 Views</span>
+                        <span><i class="far fa-clock"></i> 1:30</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ===== LATEST VIDEOS (SMALL CARDS) ===== -->
+        <!-- ===== ALL VIDEOS ===== -->
         <div class="video-row">
             <div class="row-header">
-                <h2><i class="fas fa-clock"></i> More Videos</h2>
+                <h2><i class="fas fa-clock"></i> All Videos</h2>
             </div>
 
             <div class="video-grid">
 
-                <!-- Card 1 – Pmaxy ft Jaden Drip – Impilo -->
+                <!-- Card 1 – Philani Moyo Interview -->
+                <div class="video-card" data-category="interview" data-video-id="v9D6rw0YSbA">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/v9D6rw0YSbA/mqdefault.jpg" alt="Philani Moyo Interview" loading="lazy" />
+                        <span class="duration">8:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>EXCLUSIVE INTERVIEW | Philani Moyo Opens Up on His Vision for Hwange West</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jun 9, 2026</span>
+                            <span><i class="far fa-eye"></i> 123</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 – Hon. Philani Moyo | CAB3 -->
+                <div class="video-card" data-category="interview" data-video-id="_VfvepodEUE">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/_VfvepodEUE/mqdefault.jpg" alt="Hon. Philani Moyo CAB3" loading="lazy" />
+                        <span class="duration">5:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Hon. Philani Moyo | CAB3 | Hwange West, Victoria Falls</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jun 8, 2026</span>
+                            <span><i class="far fa-eye"></i> 333</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 – Author Emmanuel Hove Book Launch -->
+                <div class="video-card" data-category="news" data-video-id="TH-lWgBoUAM">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/TH-lWgBoUAM/mqdefault.jpg" alt="Author Emmanuel Hove Book Launch" loading="lazy" />
+                        <span class="duration">3:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Author Emmanuel Hove | Book Launch | Poverty Must Go Now</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jun 20, 2026</span>
+                            <span><i class="far fa-eye"></i> 12</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 – Connecting with God | Pastor Dillon -->
+                <div class="video-card" data-category="faith" data-video-id="vxSTWPz6KbQ">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/vxSTWPz6KbQ/mqdefault.jpg" alt="Connecting with God | Pastor Dillon" loading="lazy" />
+                        <span class="duration">12:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Connecting with God | Pastor Dillon</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jun 10, 2026</span>
+                            <span><i class="far fa-eye"></i> 111</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 – Donga Partridge | Man of the Match -->
+                <div class="video-card" data-category="sports" data-video-id="gtENkwFGS-M">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/gtENkwFGS-M/mqdefault.jpg" alt="Donga Partridge Man of the Match" loading="lazy" />
+                        <span class="duration">2:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Donga Partridge | Man of the Match | Vic Falls Herentals</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jun 8, 2026</span>
+                            <span><i class="far fa-eye"></i> 14</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 – POST MATCH REACTION | AQUA STARS FC -->
+                <div class="video-card" data-category="sports" data-video-id="Gi1dUeAMkxg">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/Gi1dUeAMkxg/mqdefault.jpg" alt="Aqua Stars FC Post Match" loading="lazy" />
+                        <span class="duration">2:30</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>POST MATCH REACTION | AQUA STARS FC HEAD COACH RODGERS NDLOVU</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jun 7, 2026</span>
+                            <span><i class="far fa-eye"></i> 15</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 – VICTORIA FALLS CITY HERENTALS CONTINUE IMPRESSIVE RUN -->
+                <div class="video-card" data-category="sports" data-video-id="tMFim6faD3c">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/tMFim6faD3c/mqdefault.jpg" alt="Vic Falls Herentals Win" loading="lazy" />
+                        <span class="duration">3:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>VICTORIA FALLS CITY HERENTALS CONTINUE THEIR IMPRESSIVE RUN!</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jun 7, 2026</span>
+                            <span><i class="far fa-eye"></i> 35</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 – Wild Horizons' Rangers Roll-Out Graduation -->
+                <div class="video-card" data-category="news" data-video-id="TCOZaJ7NcSQ">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/TCOZaJ7NcSQ/mqdefault.jpg" alt="Wild Horizons Rangers Graduation" loading="lazy" />
+                        <span class="duration">2:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Wild Horizons' Rangers Roll-Out Graduation Program 2026, Mosi Grill</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> Jun 5, 2026</span>
+                            <span><i class="far fa-eye"></i> 7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 – BigBoi Huncho shares his journey -->
+                <div class="video-card" data-category="interview" data-video-id="ZMnFUL1UA9g">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/ZMnFUL1UA9g/mqdefault.jpg" alt="BigBoi Huncho shares his journey" loading="lazy" />
+                        <span class="duration">30:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>BigBoi Huncho shares his journey, struggles, passion &amp; music vision</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 28, 2026</span>
+                            <span><i class="far fa-eye"></i> 38</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10 – One Love Skateboarding Dreams -->
+                <div class="video-card" data-category="news" data-video-id="W7wZOfE8O3c">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/W7wZOfE8O3c/mqdefault.jpg" alt="One Love Skateboarding" loading="lazy" />
+                        <span class="duration">0:45</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>One Love Brings Skateboarding Dreams to Victoria Falls</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 25, 2026</span>
+                            <span><i class="far fa-eye"></i> 113</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11 – Inside Adullam Cave Rehabilitation Centre -->
+                <div class="video-card" data-category="documentary" data-video-id="Wy3GAXr7pR8">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/Wy3GAXr7pR8/mqdefault.jpg" alt="Adullam Cave Rehabilitation Centre" loading="lazy" />
+                        <span class="duration">5:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Inside Adullam Cave Rehabilitation Centre | A Place of Hope &amp; Restoration</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 22, 2026</span>
+                            <span><i class="far fa-eye"></i> 18</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12 – Road To The Africa Day Expo 2026 -->
+                <div class="video-card" data-category="documentary" data-video-id="peSXmPAaGAs">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/peSXmPAaGAs/mqdefault.jpg" alt="Road To The Africa Day Expo 2026" loading="lazy" />
+                        <span class="duration">8:30</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Road To The Africa Day Expo 2026 | Documentary</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 21, 2026</span>
+                            <span><i class="far fa-eye"></i> 99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 13 – Pastor Dillon | Day of Salvation -->
+                <div class="video-card" data-category="faith" data-video-id="McctLRJOqbg">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/McctLRJOqbg/mqdefault.jpg" alt="Pastor Dillon Day of Salvation" loading="lazy" />
+                        <span class="duration">5:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Pastor Dillon | Day of Salvation</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 18, 2026</span>
+                            <span><i class="far fa-eye"></i> 18</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 14 – Rome wasn't built in one year | Vic Falls Herentals -->
+                <div class="video-card" data-category="sports" data-video-id="t-wcEGbDUzo">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/t-wcEGbDUzo/mqdefault.jpg" alt="Vic Falls Herentals 3-0 Nkayi" loading="lazy" />
+                        <span class="duration">3:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h4>Rome wasn't built in one year | Vic Falls Herentals 3 - 0 Nkayi Utd</h4>
+                        <div class="video-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 18, 2026</span>
+                            <span><i class="far fa-eye"></i> 16</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 15 – Pmaxy ft Jaden Drip – Impilo -->
                 <div class="video-card" data-category="music" data-video-id="zFPAW--zi5E">
                     <div class="thumbnail">
                         <img src="https://img.youtube.com/vi/zFPAW--zi5E/mqdefault.jpg" alt="Pmaxy ft Jaden Drip – Impilo" loading="lazy" />
@@ -132,76 +344,46 @@
                     </div>
                 </div>
 
-                <!-- Card 2 – Connecting with God | Pastor Dillon -->
-                <div class="video-card" data-category="faith" data-video-id="vxSTWPz6KbQ">
-                    <div class="thumbnail">
-                        <img src="https://img.youtube.com/vi/vxSTWPz6KbQ/mqdefault.jpg" alt="Connecting with God | Pastor Dillon" loading="lazy" />
-                        <span class="duration">12:00</span>
-                    </div>
-                    <div class="video-info">
-                        <h4>Connecting with God | Pastor Dillon</h4>
-                        <div class="video-meta">
-                            <span><i class="far fa-calendar-alt"></i> May 2026</span>
-                            <span><i class="far fa-eye"></i> 1.2K</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 – Road To The Africa Day Expo 2026 | Documentary -->
-                <div class="video-card" data-category="documentary" data-video-id="peSXmPAaGAs">
-                    <div class="thumbnail">
-                        <img src="https://img.youtube.com/vi/peSXmPAaGAs/mqdefault.jpg" alt="Road To The Africa Day Expo 2026" loading="lazy" />
-                        <span class="duration">8:30</span>
-                    </div>
-                    <div class="video-info">
-                        <h4>Road To The Africa Day Expo 2026 | Documentary</h4>
-                        <div class="video-meta">
-                            <span><i class="far fa-calendar-alt"></i> May 20, 2026</span>
-                            <span><i class="far fa-eye"></i> 96</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 – Coach Alex Garikayi Muringa – Profile -->
+                <!-- Card 16 – Coach Alex Garikayi Muringa – Profile -->
                 <div class="video-card" data-category="interview" data-video-id="yryOS9tOHPM">
                     <div class="thumbnail">
-                        <img src="https://img.youtube.com/vi/yryOS9tOHPM/mqdefault.jpg" alt="Coach Alex Garikayi Muringa – Profile" loading="lazy" />
+                        <img src="https://img.youtube.com/vi/yryOS9tOHPM/mqdefault.jpg" alt="Coach Alex Garikayi Muringa Profile" loading="lazy" />
                         <span class="duration">6:00</span>
                     </div>
                     <div class="video-info">
                         <h4>Coach Alex Garikayi Muringa – Profile</h4>
                         <div class="video-meta">
-                            <span><i class="far fa-calendar-alt"></i> April 23, 2026</span>
+                            <span><i class="far fa-calendar-alt"></i> Apr 23, 2026</span>
                             <span><i class="far fa-eye"></i> 32</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 5 – The Majestic Podcast – Episode 1 -->
+                <!-- Card 17 – The Majestic Podcast – Episode 1 -->
                 <div class="video-card" data-category="podcast" data-video-id="nvaYSBo-E0s">
                     <div class="thumbnail">
-                        <img src="https://img.youtube.com/vi/nvaYSBo-E0s/mqdefault.jpg" alt="The Majestic Podcast – Episode 1" loading="lazy" />
+                        <img src="https://img.youtube.com/vi/nvaYSBo-E0s/mqdefault.jpg" alt="The Majestic Podcast Episode 1" loading="lazy" />
                         <span class="duration">45:00</span>
                     </div>
                     <div class="video-info">
-                        <h4>🎙 Episode 1 of The Majestic Podcast is LIVE!</h4>
+                        <h4>Episode 1 of The Majestic Podcast is LIVE!</h4>
                         <div class="video-meta">
-                            <span><i class="far fa-calendar-alt"></i> March 30, 2026</span>
+                            <span><i class="far fa-calendar-alt"></i> Mar 30, 2026</span>
                             <span><i class="far fa-eye"></i> 45</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 6 – Connection with God | Pastor Jonathan & Madison Wenger -->
+                <!-- Card 18 – Connection with God | Pastor Jonathan & Madison Wenger -->
                 <div class="video-card" data-category="faith" data-video-id="MUS21RjgkLQ">
                     <div class="thumbnail">
                         <img src="https://img.youtube.com/vi/MUS21RjgkLQ/mqdefault.jpg" alt="Connection with God" loading="lazy" />
                         <span class="duration">10:00</span>
                     </div>
                     <div class="video-info">
-                        <h4>Connection with God by Pastor Jonathan &amp; Madison Wenger ✨</h4>
+                        <h4>Connection with God by Pastor Jonathan &amp; Madison Wenger</h4>
                         <div class="video-meta">
-                            <span><i class="far fa-calendar-alt"></i> June 2026</span>
+                            <span><i class="far fa-calendar-alt"></i> Jun 2026</span>
                             <span><i class="far fa-eye"></i> 333</span>
                         </div>
                     </div>
@@ -223,20 +405,6 @@
             </div>
         </div>
     </div>
-
-
-    <!-- ===== VIDEO MODAL ===== -->
-    <div class="video-modal" id="videoModal">
-        <div class="modal-content">
-            <span class="close-modal" id="closeModal">&times;</span>
-            <div class="modal-placeholder">
-                <i class="fas fa-video"></i>
-                <h3>Video Coming Soon</h3>
-                <p>This video is not yet available. Check back later!</p>
-            </div>
-        </div>
-    </div>
-
 
 
     <script src="script.js"></script>
