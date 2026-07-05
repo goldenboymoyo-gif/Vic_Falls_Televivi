@@ -1940,10 +1940,17 @@ nav {
   color: var(--gray-500);
 }
 
-.about-full .about-image img {
+.about-full .about-image img,
+.about-full .about-image iframe {
   width: 100%;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
+}
+
+.about-full .about-image iframe {
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
 }
 
 .about-values {
