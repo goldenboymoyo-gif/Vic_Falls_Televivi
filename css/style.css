@@ -2748,31 +2748,69 @@ nav {
    RESPONSIVE - SMALL PHONES (max-width: 480px)
    ============================================================ */
 @media (max-width: 480px) {
+  .hero {
+    padding: 80px 5% 40px;
+    min-height: 92vh;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
   .hero-content h1 {
-    font-size: 28px;
+    font-size: 26px;
+    margin-bottom: 12px;
   }
 
   .hero-content p {
     font-size: 14px;
+    margin-bottom: 22px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
   }
 
   .watch-btn,
   .news-btn {
-    padding: 11px 22px;
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+    padding: 12px 20px;
     font-size: 13px;
   }
 
+  .hero-stats {
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
   .hero-stats div {
-    min-width: 90px;
-    padding: 10px 12px;
+    flex: 1 0 80px;
+    min-width: 0;
+    max-width: 130px;
+    padding: 8px 10px;
   }
 
   .hero-stats strong {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .hero-stats span {
-    font-size: 11px;
+    font-size: 10px;
+  }
+
+  .hero-highlight {
+    max-width: 100%;
+    margin: 20px auto 0;
+  }
+
+  .highlight-card {
+    padding: 14px 16px;
   }
 
   .section-top h2 {

@@ -198,7 +198,7 @@
     const closeModal = document.getElementById('closeModal');
 
     if (modal && modalIframe && closeModal) {
-        const allCards = document.querySelectorAll('.video-card');
+        const allCards = document.querySelectorAll('.video-card, .featured-card');
 
         allCards.forEach(card => {
             card.addEventListener('click', function() {
