@@ -3,116 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about VicFalls Televivi — Victoria Falls Broadcasting & Media Production Company. Our mission, values, and team.">
-    <meta property="og:title" content="About Us - VicFalls Televivi">
-    <meta property="og:description" content="The story behind the voice of Victoria Falls.">
-    <meta property="og:image" content="images/logo.png">
-    <meta property="og:type" content="website">
-    <title>About Us — VicFalls Televivi</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>About Us - VicFalls Televivi</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
 
 <nav>
-    <div class="logo"><img src="images/logo.png" alt="VicFalls Televivi" /></div>
-    <ul class="nav-links" id="desktopNavLinks">
+    <div class="logo">
+        <img src="images/logo.png" alt="VicFalls Televivi">
+    </div>
+
+    <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="news.html">Latest News</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="tv.html">TV & Videos</a></li>
-        <li><a href="live.html">Live</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html#news">Latest News</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#live">Live</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
     </ul>
-    <div class="nav-actions desktop-actions">
-        <div class="search-box"><input type="text" placeholder="Search..." /><button><i class="fas fa-search"></i></button></div>
+
+    <div class="nav-actions">
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
         <a href="login.html" class="login-btn">Login</a>
         <a href="sign-up.html" class="signup-btn">Sign Up</a>
     </div>
-    <div class="mobile-overlay" id="mobileOverlay">
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">Latest News</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="tv.html">TV & Videos</a></li>
-            <li><a href="live.html">Live</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <div class="nav-actions mobile-actions">
-            <div class="search-box"><input type="text" placeholder="Search..." /><button><i class="fas fa-search"></i></button></div>
-            <a href="login.html" class="login-btn">Login</a>
-            <a href="sign-up.html" class="signup-btn">Sign Up</a>
-        </div>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-    </button>
 </nav>
 
-<section class="page-banner">
-    <h1>About VicFalls Televivi</h1>
-    <p>The story behind the voice of Victoria Falls</p>
+<section class="about-hero">
+
+    <iframe
+        class="hero-video"
+        src="https://www.youtube.com/embed/McctLRJOqbg?autoplay=1&mute=1&loop=1&playlist=McctLRJOqbg&controls=0&showinfo=0&rel=0"
+        title="Vic Falls Televii"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+    </iframe>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="about-tag">ABOUT US</span>
+
+        <h1>Your Local Voice</h1>
+
+        <p>
+            Vic Falls Televii is Victoria Falls' premier independent media and
+            television production company, dedicated to showcasing the life,
+            culture, and stories of our community through trusted journalism
+            and innovative broadcasting.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="live.html" class="btn-primary">Watch Live</a>
+            <a href="contact.html" class="btn-secondary">Contact Us</a>
+        </div>
+
+    </div>
+
 </section>
 
-<section class="about-full">
-    <div class="about-container">
-        <div class="about-content">
-            <h3>The Voice of Victoria Falls</h3>
-            <p>VicFalls Televivi is the official video channel of Victoria Falls Broadcasting & Media Production Company, delivering news, sports, culture and tourism stories from Victoria Falls and surrounding regions.</p>
-            <p>Our channel captures real community moments from Mosi Oa Tunya High School, Mapopoma Festival performances, Zambezi Zone Athletics, and the daily stories that shape life in Victoria Falls.</p>
-            <p>We publish in-depth video reports, live event coverage, and feature documentaries that connect residents, visitors and stakeholders across Zimbabwe.</p>
-            <div class="about-stats">
-                <div class="stat-box">
-                    <h4>407</h4>
-                    <span>YouTube Subscribers</span>
-                </div>
-                <div class="stat-box">
-                    <h4>141</h4>
-                    <span>Published Videos</span>
-                </div>
-                <div class="stat-box">
-                    <h4>120+</h4>
-                    <span>Community Stories</span>
-                </div>
-                <div class="stat-box">
-                    <h4>5+</h4>
-                    <span>Local Contributors</span>
-                </div>
-            </div>
-        </div>
-        <div class="about-image">
-            <iframe src="https://www.youtube.com/embed/peSXmPAaGAs?rel=0&modestbranding=1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        </div>
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="stat-box">
+        <i class="fas fa-video"></i>
+
+        <h2>140+</h2>
+
+        <p>Videos Produced</p>
+    </div>
+
+    <div class="stat-box">
+        <i class="fas fa-users"></i>
+
+        <h2>5K+</h2>
+
+        <p>Community Reach</p>
+    </div>
+
+    <div class="stat-box">
+        <i class="fas fa-tv"></i>
+
+        <h2>100+</h2>
+
+        <p>Hours Broadcast</p>
+    </div>
+
+    <div class="stat-box">
+        <i class="fas fa-camera"></i>
+
+        <h2>200+</h2>
+
+        <p>Events Covered</p>
+    </div>
+
+</section>
+
+<section class="who-we-are" id="what-we-do">
+    <h2>Who We Are</h2>
+    <p>
+        Our team is made up of journalists, producers, editors, and creatives who are passionate about delivering
+        stories that matter. We combine local knowledge, creative storytelling, and modern media production to
+        connect our audience with the latest news, culture, and community stories.
+    </p>
+</section>
+
+<section class="cards-section">
+    <div class="card">
+        <h3><i class="fas fa-bullseye card-icon"></i> Our Mission</h3>
+        <p>To inform, educate and inspire our community through credible journalism, innovative programming and authentic storytelling.</p>
+    </div>
+    <div class="card">
+        <h3><i class="fas fa-eye card-icon"></i> Our Vision</h3>
+        <p>To become the leading local media house recognized for excellence, integrity and impact in storytelling.</p>
+    </div>
+    <div class="card">
+        <h3><i class="fas fa-handshake card-icon"></i> Our Values</h3>
+        <ul class="values-list">
+            <li>Integrity</li>
+            <li>Innovation</li>
+            <li>Accountability</li>
+            <li>Community</li>
+            <li>Excellence</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h3><i class="fas fa-users card-icon"></i> Our Team</h3>
+        <p>A passionate team of journalists, producers, editors and creatives working behind the scenes to bring stories to life.</p>
     </div>
 </section>
 
-<section class="about-values">
-    <h2>Our Values</h2>
-    <div class="values-grid">
-        <div class="value-card">
-            <i class="fas fa-handshake"></i>
-            <h3>Integrity</h3>
-            <p>We uphold the highest standards of journalistic integrity and ethical reporting.</p>
+<section class="services">
+    <h2>What We Do</h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <h3><i class="fas fa-newspaper service-icon"></i> News & Affairs</h3>
+            <p>Breaking news, local stories and in-depth reporting.</p>
         </div>
-        <div class="value-card">
-            <i class="fas fa-users"></i>
-            <h3>Community</h3>
-            <p>We are deeply rooted in the Victoria Falls community and serve its people.</p>
+        <div class="service-card">
+            <h3><i class="fas fa-video service-icon"></i> TV Production</h3>
+            <p>High-quality programmes, documentaries and talk shows.</p>
         </div>
-        <div class="value-card">
-            <i class="fas fa-lightbulb"></i>
-            <h3>Innovation</h3>
-            <p>We embrace digital innovation to deliver news in modern, accessible ways.</p>
+        <div class="service-card">
+            <h3><i class="fas fa-broadcast-tower service-icon"></i> Live Broadcasting</h3>
+            <p>Live coverage of events, community activities and breaking news.</p>
         </div>
-        <div class="value-card">
-            <i class="fas fa-globe-africa"></i>
-            <h3>Impact</h3>
-            <p>We strive to make a positive impact through stories that inspire change.</p>
+        <div class="service-card">
+            <h3><i class="fas fa-share-nodes service-icon"></i> Digital Media</h3>
+            <p>Engaging videos, social media content and online streaming.</p>
         </div>
     </div>
 </section>
@@ -163,6 +210,7 @@
 </footer>
 
 <button id="backToTop" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
 <script src="script.js"></script>
 </body>
 </html>

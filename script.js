@@ -348,14 +348,16 @@
     // ============================================================
     // COUNTER ANIMATION FOR STATS
     // ============================================================
-    const statNumbers = document.querySelectorAll('.about-stats .stat-box h4, .hero-stats strong');
+    const statNumbers = document.querySelectorAll('.stats .stat-box h2, .about-stats .stat-box h4, .hero-stats strong');
     if (statNumbers.length && 'IntersectionObserver' in window) {
         const counterObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                     const el = entry.target;
                     const text = el.textContent.trim();
-                    const num = parseInt(text.replace(/[^0-9]/g, ''));
+                    let multiplier = 1;
+                    if (/k/i.test(text)) multiplier = 1000;
+                    const num = parseInt(text.replace(/[^0-9]/g, '')) * multiplier;
                     if (!isNaN(num) && num > 0) {
                         const suffix = text.replace(/[0-9]/g, '');
                         let current = 0;
@@ -366,7 +368,8 @@
                                 current = num;
                                 clearInterval(timer);
                             }
-                            el.textContent = current.toLocaleString() + suffix;
+                            const display = multiplier === 1000 ? Math.round(current / 1000) + 'K' : current;
+                            el.textContent = display + suffix.replace(/k/i, '');
                         }, 30);
                     }
                     counterObserver.unobserve(el);
