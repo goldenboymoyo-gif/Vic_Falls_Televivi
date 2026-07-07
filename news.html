@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover events in Victoria Falls — music festivals, sports tournaments, community clean-ups, and tourism forums covered by VicFalls Televivi.">
-    <meta property="og:title" content="Events - VicFalls Televivi">
-    <meta property="og:description" content="Discover exciting events happening in Victoria Falls.">
+    <meta name="description" content="Stay informed with the latest news from Victoria Falls. VicFalls Televivi covers education, sports, entertainment, tourism and community stories.">
+    <meta property="og:title" content="Latest News - VicFalls Televivi">
+    <meta property="og:description" content="Stay informed with the latest stories from Victoria Falls.">
     <meta property="og:image" content="images/logo.png">
     <meta property="og:type" content="website">
-    <title>Events — VicFalls Televivi</title>
+    <title>Latest News — VicFalls Televivi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/style.css">
@@ -18,11 +18,13 @@
 <body>
 
 <nav>
-    <div class="logo"><img src="images/logo.png" alt="VicFalls Televivi" /></div>
+    <div class="logo">
+        <img src="images/logo.png" alt="VicFalls Televivi" />
+    </div>
     <ul class="nav-links" id="desktopNavLinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="news.html">Latest News</a></li>
-        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="news.html" class="active">Latest News</a></li>
+        <li><a href="events.html">Events</a></li>
         <li><a href="tv.html">TV & Videos</a></li>
         <li><a href="live.html">Live</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -47,7 +49,10 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <div class="nav-actions mobile-actions">
-            <div class="search-box"><input type="text" placeholder="Search..." /><button aria-label="Search"><i class="fas fa-search"></i></button></div>
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+                <button aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
             <a href="login.html" class="login-btn">Login</a>
             <a href="sign-up.html" class="signup-btn">Sign Up</a>
         </div>
@@ -58,60 +63,71 @@
 </nav>
 
 <section class="page-banner">
-    <h1>Upcoming Events</h1>
-    <p>Discover exciting events happening in Victoria Falls</p>
+    <h1>Latest News</h1>
+    <p>Stay informed with the latest stories from Victoria Falls</p>
 </section>
 
-<section class="all-events">
-    <div class="event-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="sports">Sports</button>
-        <button class="filter-btn" data-filter="music">Music</button>
-        <button class="filter-btn" data-filter="community">Community</button>
-        <button class="filter-btn" data-filter="tourism">Tourism</button>
-    </div>
-    <div class="events-container">
-        <div class="card" data-category="music">
-            <img src="images/music.jpg" alt="Mapopoma Festival">
-            <h3>Mapopoma Festival</h3>
-            <p>Catch live performances and cultural showcases from Victoria Falls’ biggest music event of the season.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> July 15, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Victoria Falls Town Park</p>
-            <a href="#" class="see-more">Learn More</a>
+<section class="all-news">
+    <div class="news-grid">
+        <div class="news-card">
+            <img src="images/education.jpeg" alt="R. Sibanda feature">
+            <div class="news-card-content">
+                <span class="tag">Education</span>
+                <h3>R. Sibanda: The game changer at Mosi Oa Tunya High</h3>
+                <p class="date"><i class="far fa-calendar"></i> July 3, 2026</p>
+                <p>Our latest video profiles R. Sibanda and how the Mosi Oa Tunya High School student is transforming school sports and academic motivation in Matabeleland North.</p>
+                <a href="https://www.youtube.com/watch?v=qK5lsLyyS6M" class="read-more" target="_blank" rel="noopener noreferrer">Watch Video <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
-        <div class="card" data-category="sports">
+        <div class="news-card">
             <img src="images/sports.jpeg" alt="Zambezi Zone Athletics">
-            <h3>Zambezi Zone Athletics Day 2</h3>
-            <p>Student athletes from local schools compete in track and field events, with live coverage from VicFalls Televivi.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> July 20, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Mosi Oa Tunya Stadium</p>
-            <a href="#" class="see-more">Watch Coverage</a>
+            <div class="news-card-content">
+                <span class="tag">Sports</span>
+                <h3>Zambezi Zone Athletics Day 2 highlights</h3>
+                <p class="date"><i class="far fa-calendar"></i> July 2, 2026</p>
+                <p>VicFalls Televivi reports live from the athletics stadium, where local schools won more than 50 medals and student athletes set new personal records.</p>
+                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
-        <div class="card" data-category="community">
-            <img src="images/communtiy.jpg" alt="Community event">
-            <h3>Community Clean-Up Day</h3>
-            <p>Residents and youth groups join forces to keep tourism routes clean and welcoming for visitors.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> July 22, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Main Street & Victoria Falls Bridge</p>
-            <a href="#" class="see-more">Join Now</a>
+        <div class="news-card">
+            <img src="images/music.jpg" alt="DT BIO Mudimba Performance">
+            <div class="news-card-content">
+                <span class="tag">Entertainment</span>
+                <h3>DT BIO Mudimba headlines Mapopoma Festival</h3>
+                <p class="date"><i class="far fa-calendar"></i> July 1, 2026</p>
+                <p>The channel captured an electric performance by DT BIO Mudimba at Mapopoma Festival, showcasing Victoria Falls as a growing destination for live music and culture.</p>
+                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
-        <div class="card" data-category="tourism">
-            <img src="images/hero-setcion.jpeg" alt="Tourism forum">
-            <h3>Tourism Partner Forum</h3>
-            <p>Discuss new tourism products, training and investment opportunities that support the future of Victoria Falls.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> August 2, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Elephant Hills Hotel</p>
-            <a href="#" class="see-more">Register</a>
+        <div class="news-card">
+            <img src="images/communtiy.jpg" alt="MajorXX Vlog lifestyle">
+            <div class="news-card-content">
+                <span class="tag">Culture</span>
+                <h3>MajorXX Vlog explores local life in Victoria Falls</h3>
+                <p class="date"><i class="far fa-calendar"></i> June 30, 2026</p>
+                <p>Our lifestyle coverage follows young creators and performers across Victoria Falls, highlighting the city’s energy and talent.</p>
+                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
-        <div class="card" data-category="community">
-            <img src="images/environment.jpg" alt="Health campaign">
-            <h3>Health Awareness Campaign</h3>
-            <p>Free malaria screenings and family health education provided by local clinics and partners.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> July 25, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Municipal Hall</p>
-            <a href="#" class="see-more">Learn More</a>
+        <div class="news-card">
+            <img src="images/hero-setcion.jpeg" alt="Victoria Falls tourism recovery">
+            <div class="news-card-content">
+                <span class="tag">Tourism</span>
+                <h3>Victoria Falls tourism recovers with new visitor experiences</h3>
+                <p class="date"><i class="far fa-calendar"></i> June 28, 2026</p>
+                <p>Tour operators and lodges report a season of strong bookings as travellers return to iconic sites and new guided tours around the Zambezi.</p>
+                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
-        <div class="card" data-category="sports">
-            <img src="images/boxing tournment.jpg" alt="Boxing tournament">
-            <h3>Victoria Falls Boxing Night</h3>
-            <p>Local boxing contenders take the ring in an exciting evening of sport and entertainment.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> July 28, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Victoria Falls Gymnasium</p>
-            <a href="#" class="see-more">Get Tickets</a>
+        <div class="news-card">
+            <img src="images/environment.jpg" alt="Community clean-up">
+            <div class="news-card-content">
+                <span class="tag">Community</span>
+                <h3>Community clean-up and youth sport programs unite Victoria Falls</h3>
+                <p class="date"><i class="far fa-calendar"></i> June 26, 2026</p>
+                <p>Residents and school teams joined our coverage of a clean-up initiative that supports youth sports fields and local tourism trails.</p>
+                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
     </div>
 </section>

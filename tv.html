@@ -4,73 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Watch videos from VicFalls Televivi — news reports, event highlights, sports coverage, and community stories from Victoria Falls.">
+    <meta property="og:title" content="TV & Videos - VicFalls Televivi">
+    <meta property="og:description" content="Watch our latest videos and video galleries.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:type" content="website">
     <title>TV & Videos — VicFalls Televivi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./css/tv&videos.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-    
+
 <nav>
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images/logo.png" alt="VicFalls Televivi" />
-        </div>
-
-        <!-- Desktop Navigation Links -->
-        <ul class="nav-links" id="desktopNavLinks">
-            <li><a href="#">Home</a></li>
-            <li><a href="index.html#news">Latest News</a></li>
-            <li><a href="index.html#Events">Events</a></li>
-            <li><a href="index.html#live">Live</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="index.html#contact">Contact Us</a></li>
+    <div class="logo"><img src="images/logo.png" alt="VicFalls Televivi" /></div>
+    <ul class="nav-links" id="desktopNavLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">Latest News</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tv.html" class="active">TV & Videos</a></li>
+        <li><a href="live.html">Live</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="nav-actions desktop-actions">
+        <div class="search-box"><input type="text" placeholder="Search..." /><button aria-label="Search"><i class="fas fa-search"></i></button></div>
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="sign-up.html" class="signup-btn">Sign Up</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">Latest News</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="tv.html">TV & Videos</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
-
-        <!-- Desktop Right Actions -->
-        <div class="nav-actions desktop-actions" id="desktopNavActions">
-            <div class="search-box">
-                <input type="text" placeholder="Search..." />
-                <button aria-label="Search"><i class="fas fa-search"></i></button>
-            </div>
+        <div class="nav-actions mobile-actions">
+            <div class="search-box"><input type="text" placeholder="Search..." /><button aria-label="Search"><i class="fas fa-search"></i></button></div>
             <a href="login.html" class="login-btn">Login</a>
             <a href="sign-up.html" class="signup-btn">Sign Up</a>
         </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
 
-        <!-- Hamburger Button -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-        <!-- Mobile Overlay (full‑screen menu) -->
-        <div class="mobile-overlay" id="mobileOverlay">
-            <ul class="mobile-nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="index.html#news">Latest News</a></li>
-                <li><a href="index.html#Events">Events</a></li>
-                <li><a href="index.html#live">Live</a></li>
-                <li><a href="index.html#about">About Us</a></li>
-                <li><a href="index.html#contact">Contact Us</a></li>
-            </ul>
-            <div class="nav-actions mobile-actions">
-                <div class="search-box">
-                    <input type="text" placeholder="Search..." />
-                    <button aria-label="Search"><i class="fas fa-search"></i></button>
-                </div>
-                <a href="login.html" class="login-btn">Login</a>
-                <a href="sign-up.html" class="signup-btn">Sign Up</a>
-            </div>
-        </div>
+<section class="page-banner">
+    <h1>TV & Videos</h1>
+    <p>Watch videos and coverage from Victoria Falls</p>
+</section>
 
-
-
-    <!-- ============================================================ -->
-    <!-- TV & VIDEOS SECTION – Featured + Small Cards -->
-    <!-- ============================================================ -->
-    <section class="videos-section">
+<section class="tv-section">
 
         <!-- Header -->
         <div class="videos-header">
@@ -406,7 +395,52 @@
         </div>
     </div>
 
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <img src="images/logo.png" alt="VicFalls Televivi" class="footer-logo">
+            <h2>VicFalls Televivi</h2>
+            <p>We produce high-impact video stories from Victoria Falls — trusted local journalism for residents, visitors and partners. Work with our team for coverage, sponsorship and bespoke branded content.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/vicfallstelevivi" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@vicfallstelevivi" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/263774699049" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="live.html">Live</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h3>Featured Stories</h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=qK5lsLyyS6M" target="_blank" rel="noopener noreferrer">R. Sibanda, the game changer</a></li>
+                <li><a href="https://www.youtube.com/watch?v=Zx-xEfauWTU" target="_blank" rel="noopener noreferrer">DT BIO Mudimba live at Mapopoma</a></li>
+                <li><a href="https://www.youtube.com/watch?v=n_d7e0AkWEE" target="_blank" rel="noopener noreferrer">Provincial Athletics Day 2</a></li>
+            </ul>
+        </div>
+        <div class="footer-box footer-contact-box">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> vicfallstelevivi@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +263 774 699 049</p>
+            <p><i class="fas fa-map-marker-alt"></i> Victoria Falls, Zimbabwe</p>
+            <a href="contact.html" class="footer-link-btn">Work with Us</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Built for brands, partners and audiences — delivering high-impact local media for Victoria Falls.</p>
+        <p>&copy; 2026 <span>VicFalls Televivi</span>. All Rights Reserved.</p>
+    </div>
+</footer>
 
-    <script src="script.js"></script>
+<button id="backToTop" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+<script src="script.js"></script>
 </body>
 </html>

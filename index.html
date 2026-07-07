@@ -3,462 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VicFalls Televivi</title>
+    <meta name="description" content="VicFalls Televivi — Victoria Falls' leading video newsroom. Local news, sports, tourism, festivals and community stories filmed for YouTube and Facebook.">
+    <meta property="og:title" content="VicFalls Televivi - The Voice of Victoria Falls">
+    <meta property="og:description" content="Victoria Falls' leading video newsroom. News, sports, tourism and festival stories.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>VicFalls Televivi — The Voice of Victoria Falls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-
-    <!-- Navigation -->
 
 <nav>
     <div class="logo">
         <img src="images/logo.png" alt="VicFalls Televivi" />
     </div>
-
     <ul class="nav-links" id="desktopNavLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#news">Latest News</a></li>
-        <li><a href="index.html#events">Events</a></li>
-        <li><a href="TV & VIDEOS.html">TV & Videos</a></li>
-        <li><a href="index.html#live">Live</a></li>
-        <li><a href="index.html#about">About Us</a></li>
-        <li><a href="index.html#contact">Contact Us</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="news.html">Latest News</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tv.html">TV & Videos</a></li>
+        <li><a href="live.html">Live</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
     </ul>
-
-    <div class="nav-actions desktop-actions" id="desktopNavActions">
+    <div class="nav-actions desktop-actions">
         <div class="search-box">
-            <input type="text" placeholder="Search..." />
-            <button><i class="fas fa-search"></i></button>
+            <input type="text" placeholder="Search..." id="searchInput" />
+            <button id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
         </div>
         <a href="login.html" class="login-btn">Login</a>
         <a href="sign-up.html" class="signup-btn">Sign Up</a>
     </div>
-
     <div class="mobile-overlay" id="mobileOverlay">
         <ul class="mobile-nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#news">Latest News</a></li>
-            <li><a href="index.html#events">Events</a></li>
-            <li><a href="TV & VIDEOS.html">TV & Videos</a></li>
-            <li><a href="index.html#live">Live</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="index.html#contact">Contact Us</a></li>
+            <li><a href="news.html">Latest News</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="tv.html">TV & Videos</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <div class="nav-actions mobile-actions">
             <div class="search-box">
                 <input type="text" placeholder="Search..." />
-                <button><i class="fas fa-search"></i></button>
+                <button aria-label="Search"><i class="fas fa-search"></i></button>
             </div>
             <a href="login.html" class="login-btn">Login</a>
             <a href="sign-up.html" class="signup-btn">Sign Up</a>
         </div>
     </div>
-
     <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </button>
 </nav>
-    <!-- Breaking News -->
-    <section class="breaking-news">
-        <div class="breaking-title">
-            Latest Updates
-            <i class="fas fa-bullhorn"></i>
+
+<section class="breaking-news">
+    <div class="breaking-title">Latest Updates <i class="fas fa-bullhorn"></i></div>
+    <div class="ticker">
+        <div class="ticker-text">
+            Mapopoma Festival live performance by DT BIO Mudimba • Zambezi Zone Athletics coverage at NASH 2024 • Mosi Oa Tunya High School sports highlights • New video: R. Sibanda, the game changer
         </div>
+    </div>
+</section>
 
-        <div class="ticker">
-            <marquee>
-                Victoria Falls Marathon attracts international athletes • Local boxing tournament scheduled this weekend • Tourism sector continues to grow • Community clean-up campaign launched
-            </marquee>
+<section class="hero">
+    <div class="hero-video-container">
+        <iframe class="hero-video" src="https://www.youtube.com/embed/FVFsiJBSQps?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=FVFsiJBSQps&playsinline=1" title="VicFalls Televivi promotional video" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        
+        <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+        <span class="hero-label">Local Video News & Media</span>
+        <h1>Victoria Falls’ leading video newsroom.</h1>
+        <p>VicFalls Televivi delivers fast, authentic coverage from Victoria Falls: news, sports, tourism and festival stories filmed for YouTube and Facebook audiences.</p>
+        <div class="hero-buttons">
+            <a href="https://www.youtube.com/@vicfallstelevivi" target="_blank" rel="noopener noreferrer" class="watch-btn">YouTube Channel</a>
+            <a href="https://www.facebook.com/vicfallstelevivi" target="_blank" rel="noopener noreferrer" class="news-btn">Facebook Page</a>
         </div>
-    </section>
-
-    <!-- Hero Section -->
-    <section class="hero">
-    <iframe
-        class="hero-video"
-        src="https://www.youtube.com/embed/TH-lWgBoUAM?autoplay=1&mute=1&controls=0&loop=1&playlist=TH-lWgBoUAM&rel=0&modestbranding=1"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
-    </iframe>
-    
-    <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-
-            <h1 style="font-size: 50px;">The Voice of Victoria Falls</h1>
-
-            <p>
-                Bringing you news, stories and events that matter.
-                Stay informed with breaking news, sports, entertainment,
-                and community stories from Victoria Falls and beyond.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#" class="watch-btn">Watch Live</a>
-                <a href="#" class="news-btn">Latest News</a>
+        <div class="hero-stats">
+            <div>
+                <strong>407</strong>
+                <span>Subscribers</span>
             </div>
-
+            <div>
+                <strong>141</strong>
+                <span>Published videos</span>
+            </div>
+            <div>
+                <strong>13K+</strong>
+                <span>Top video views</span>
+            </div>
         </div>
-
-        <div class="advert-card">
-
-    <div class="advert-content">
-
-        <h3>ADVERTISE WITH US</h3>
-
-        <p>Reach Thousands Daily</p>
-
-        <a href="#" class="advert-btn">
-            LEARN MORE
-        </a>
-
     </div>
-
-    <div class="advert-image">
-        <img src="images/advertise.jpg" alt="Advertise With Us">
+    <div class="hero-highlight">
+        <div class="highlight-card">
+            <h4>Featured story</h4>
+            <p>“R. Sibanda, the game changer” at Mosi Oa Tunya High School.</p>
+        </div>
+        <div class="highlight-card">
+            <h4>Festival coverage</h4>
+            <p>DT BIO Mudimba live from the Mapopoma Festival.</p>
+        </div>
+        <div class="highlight-card">
+            <h4>Sports spotlight</h4>
+            <p>Provincial Athletics Day 2 at NASH 2024.</p>
+        </div>
     </div>
+    <div class="advert-card">
+        <div class="advert-content">
+            <h3>Advertise with us</h3>
+            <p class="advert-bio">Reach regional audiences with sponsored segments.</p>
+            <a href="contact.html" class="advert-btn">Advertise</a>
+        </div>
+        <div class="advert-image">
+            <img src="images/advertise.jpg" alt="Promote with VicFalls Televivi">
+        </div>
+    </div>
+</section>
 
-</div>
-
-    </section>
-
-   <!-- LATEST NEWS -->
-<section class="latest-news" id="latest-news">
-
+<section class="latest-news reveal" id="news">
     <div class="section-top">
         <div>
             <h2>Latest News</h2>
             <p>Latest news in Victoria Falls</p>
         </div>
-        <a href="view.html" class="view-all">View All →</a>
+        <a href="news.html" class="view-all">View All →</a>
     </div>
-
-    <div class="news-container">
-
-<!-- CARD 1 - Education -->
-<a href="https://youtu.be/Zsmtq3yfS5I" target="_blank" class="yt-card" style="text-decoration: none;">
-    <div class="yt-thumb">
-        <img src="https://via.placeholder.com/320x180/00BCD4/FFFFFF?text=Education" alt="Education">
-        <span class="yt-badge">3:20</span>
-    </div>
-    <div class="yt-info">
-        <h3>Schools prepare for national examinations</h3>
-        <span>12K views • 1 day ago</span>
-    </div>
-</a>
-
-<!-- CARD 2 - Sports -->
-<a href="https://youtu.be/tMFim6faD3c" target="_blank" class="yt-card" style="text-decoration: none;">
-    <div class="yt-thumb">
-        <img src="https://via.placeholder.com/320x180/FF6B00/FFFFFF?text=Boxing" alt="Sports">
-        <span class="yt-badge">4:10</span>
-    </div>
-    <div class="yt-info">
-        <h3>Victoria Falls Boxing Academy wins regional title</h3>
-        <span>18K views • 2 days ago</span>
-    </div>
-</a>
-
-<!-- CARD 3 - Tourism -->
-<a href="https://www.facebook.com/watch/hashtag/victoriafallszimbabwe/" target="_blank" class="yt-card" style="text-decoration: none;">
-    <div class="yt-thumb">
-        <img src="https://via.placeholder.com/320x180/2196F3/FFFFFF?text=Tourism" alt="Tourism">
-        <span class="yt-badge">5:05</span>
-    </div>
-    <div class="yt-info">
-        <h3>Victoria Falls attracts global tourists</h3>
-        <span>25K views • 3 days ago</span>
-    </div>
-</a>
-
-<!-- CARD 4 - Health -->
-<a href="https://youtu.be/AvtsgcCP6AQ" target="_blank" class="yt-card" style="text-decoration: none;">
-    <div class="yt-thumb">
-        <img src="https://via.placeholder.com/320x180/FF4081/FFFFFF?text=Health" alt="Health">
-        <span class="yt-badge">2:45</span>
-    </div>
-    <div class="yt-info">
-        <h3>Health awareness campaign expands across communities</h3>
-        <span>9K views • 4 days ago</span>
-    </div>
-</a>
-
-<!-- CARD 5 - Environment -->
-<a href="https://www.instagram.com/reel/DZG5QhdiYQB/" target="_blank" class="yt-card" style="text-decoration: none;">
-    <div class="yt-thumb">
-        <img src="https://via.placeholder.com/320x180/4CAF50/FFFFFF?text=Environment" alt="Environment">
-        <span class="yt-badge">3:50</span>
-    </div>
-    <div class="yt-info">
-        <h3>Community clean-up campaign improves city environment</h3>
-        <span>7K views • 5 days ago</span>
-    </div>
-</a>
-
-<!-- CARD 6 - Entertainment -->
-<a href="https://youtu.be/M3sbVO2uNVQ" target="_blank" class="yt-card" style="text-decoration: none;">
-    <div class="yt-thumb">
-        <img src="https://via.placeholder.com/320x180/9C27B0/FFFFFF?text=Entertainment" alt="Entertainment">
-        <span class="yt-badge">6:15</span>
-    </div>
-    <div class="yt-info">
-        <h3>Victoria Falls Music Festival attracts thousands</h3>
-        <span>30K views • 1 week ago</span>
-    </div>
-</a>
-
-<!-- CARD 7 - Lifestyle -->
-<a href="https://youtu.be/peSXmPAaGAs" target="_blank" class="yt-card" style="text-decoration: none;">
-    <div class="yt-thumb">
-        <img src="https://via.placeholder.com/320x180/FF6F00/FFFFFF?text=Lifestyle" alt="Lifestyle">
-        <span class="yt-badge">4:00</span>
-    </div>
-    <div class="yt-info">
-        <h3>Top places to visit in Victoria Falls</h3>
-        <span>11K views • 2 days ago</span>
-    </div>
-</a>
-
-<!-- CARD 8 - Business -->
-<a href="https://youtu.be/_VfvepodEUE" target="_blank" class="yt-card" style="text-decoration: none;">
-    <div class="yt-thumb">
-        <img src="https://via.placeholder.com/320x180/0D47A1/FFFFFF?text=Business" alt="Business">
-        <span class="yt-badge">5:30</span>
-    </div>
-    <div class="yt-info">
-        <h3>New startups boost local economy</h3>
-        <span>20K views • 3 days ago</span>
-    </div>
-</a>
-
-<!-- CARD 9 - Technology -->
-<a href="https://www.instagram.com/p/DY1c4kyMX_g/" target="_blank" class="yt-card" style="text-decoration: none;">
-    <div class="yt-thumb">
-        <img src="https://via.placeholder.com/320x180/00BCD4/FFFFFF?text=Technology" alt="Technology">
-        <span class="yt-badge">3:40</span>
-    </div>
-    <div class="yt-info">
-        <h3>Digital skills workshop empowers young people</h3>
-        <span>27K views • 1 week ago</span>
-    </div>
-</a>
-
+    <div class="news-container stagger-children">
+        <div class="card" onclick="location.href='news.html'">
+            <img src="images/education.jpeg" alt="High school athletics">
+            <span>Education</span>
+            <h3>Mosi Oa Tunya High School athletes claim regional honors</h3>
+            <p>Our video coverage follows school athletes from Mosi Oa Tunya High School as they compete in Matabeleland North sports events.</p>
+        </div>
+        <div class="card" onclick="location.href='news.html'">
+            <img src="images/sports.jpeg" alt="Athletics coverage">
+            <span>Sports</span>
+            <h3>Zambezi Zone Athletics delivers more than 50 gold medals</h3>
+            <p>VicFalls Televivi reports from NASH 2024, highlighting student success and local athletics achievements.</p>
+        </div>
+        <div class="card" onclick="location.href='news.html'">
+            <img src="images/music.jpg" alt="Mapopoma Festival performance">
+            <span>Entertainment</span>
+            <h3>DT BIO Mudimba headlines Mapopoma Festival</h3>
+            <p>Watch our coverage of a powerful live performance from the Victoria Falls Mapopoma Festival stage.</p>
+        </div>
+        <div class="card" onclick="location.href='news.html'">
+            <img src="images/environment.jpg" alt="Community sports story">
+            <span>Community</span>
+            <h3>Local youth sport development builds stronger schools</h3>
+            <p>Stories from Victoria Falls that connect school athletics, community leaders and future career pathways.</p>
+        </div>
+        <div class="card" onclick="location.href='news.html'">
+            <img src="images/entertainment.jpeg" alt="Lifestyle coverage">
+            <span>Culture</span>
+            <h3>MajorXX Vlog explores life in Victoria Falls</h3>
+            <p>Our channel highlights local lifestyle stories, featuring music artists and community voices.</p>
+        </div>
     </div>
 </section>
 
-<!-- Events-->
-    <section class="events" id="events">
-
-        <div class="section-top">
-
-            <div class="events-heading">
-                <h1>Upcoming Events</h1>
-                <p>Don't miss out on these events</p>
-            </div>
-
-            <a href="events.html" class="view-all">View All →</a>
-
-        </div>
-
-        <div class="events-container">
-
-            <div class="card">
-                <img src="images/marathon.jpg">
-                <h3>Victoria <span> Falls Marathon</span></h3>
-                <p>Join us for the annual marathon event attracting athletes from around the world.</p>
-                <a href="#" class="see-more">See More</a>
-            </div>
-
-            <div class="card">
-                <img src="images/boxing tournment.jpg">
-                <h3>Local <span> Boxing Tournament</span></h3>
-                <p>Witness thrilling boxing matches featuring local talent this weekend.</p>
-                <a href="#" class="see-more">See More</a>
-            </div>
-
-            <div class="card">
-                <img src="images/music.jpg">   
-                <h3>Music <span> Festival</span></h3>
-                <p>Experience live performances from top artists at the Victoria Falls Music Festival.</p>
-                <a href="#" class="see-more">See More</a>
-            </div>
-            </section>
-    
-
-<!-- Live Section -->
-
-<section class="live-section" id="live">
-
+<section class="events reveal" id="events">
     <div class="section-top">
+        <div>
+            <h2>Upcoming Events</h2>
+            <p>Don't miss out on these events</p>
+        </div>
+        <a href="events.html" class="view-all">View All →</a>
+    </div>
+    <div class="events-container stagger-children">
+        <div class="card" onclick="location.href='events.html'">
+            <img src="images/music.jpg" alt="Mapopoma Festival event">
+            <h3>Mapopoma Festival</h3>
+            <p>Live coverage of music, dance and cultural performances from one of Victoria Falls’ key community festivals.</p>
+            <a href="events.html" class="see-more">See More</a>
+        </div>
+        <div class="card" onclick="location.href='events.html'">
+            <img src="images/sports.jpeg" alt="NASH track event">
+            <h3>Provincial Athletics Day 2</h3>
+            <p>Full reporting from NASH 2024 as Victoria Falls teams compete in the Zambezi Zone Athletics championships.</p>
+            <a href="events.html" class="see-more">See More</a>
+        </div>
+        <div class="card" onclick="location.href='events.html'">
+            <img src="images/education.jpeg" alt="School sports coverage">
+            <h3>School Sports Gala</h3>
+            <p>Student competitions, interviews and achievements from local school sports in Victoria Falls.</p>
+            <a href="events.html" class="see-more">See More</a>
+        </div>
+    </div>
+</section>
 
+<section class="live-section reveal" id="live">
+    <div class="section-top">
         <div>
             <h2>Live Now</h2>
             <p>Watch ongoing events and live broadcasts</p>
         </div>
-
-        <a href="#" class="view-all">View All →</a>
-
+        <a href="live.html" class="view-all">View All →</a>
     </div>
-
-    <div class="live-container">
-
-        <div class="live-card">
-            <img src="images/marathon-live.jpg">
-
-            <span>🔴 LIVE</span>
-
-            <h3>Victoria Falls Marathon Coverage</h3>
-
-            <p>
-                Follow live updates and interviews from the marathon.
-            </p>
-
-            <a href="#">Watch Live</a>
-
+    <div class="live-container stagger-children">
+        <div class="live-card" onclick="location.href='live.html'">
+            <img src="images/music.jpg" alt="Festival live coverage">
+            <span>LIVE</span>
+            <h3>Mapopoma Festival Recap</h3>
+            <p>Live highlights from the Mapopoma Festival stage, including performances and audience reactions.</p>
+            <a href="live.html">Watch Live</a>
         </div>
-
-        <div class="live-card">
-            <img src="images/communtiy.jpg">
-
-            <span>🔴 LIVE</span>
-
-            <h3>Community Events Coverage</h3>
-
-            <p>
-                Stay connected with interviews and local events.
-            </p>
-
-            <a href="#">Watch Live</a>
-
+        <div class="live-card" onclick="location.href='live.html'">
+            <img src="images/communtiy.jpg" alt="Community coverage">
+            <span>LIVE</span>
+            <h3>Community News Bulletin</h3>
+            <p>Updates from local leadership, youth initiatives and community development in Victoria Falls.</p>
+            <a href="live.html">Watch Live</a>
         </div>
-
-        <div class="live-card">
-            <img src="images/sports-co.jpg">
-
-            <span>🔴 LIVE</span>
-
-            <h3>Sports Updates</h3>
-
-            <p>
-                Watch the latest sporting activities and tournaments.
-            </p>
-
-            <a href="#">Watch Live</a>
-
-        </div>
-
-    </div>
-
-</section>
-        
-<!--About Us Section -->
-
-<section class="home-about" id="about">
-    <div class="about-content">
-        <span class="about-label">ABOUT US</span>
-
-        <h1>
-            Telling Our Stories,<br>
-            Connecting Our Community
-        </h1>
-
-        <p>
-            Vic Falls Televiv is more than just a media company — we are
-            storytellers, visionaries, and community connectors. Based in
-            Victoria Falls, we are dedicated to producing and broadcasting
-            content that informs, inspires, and empowers.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#" class="btn-primary">Watch Live</a>
-            <a href="#" class="btn-secondary">Our Programmes</a>
+        <div class="live-card" onclick="location.href='live.html'">
+            <img src="images/sports-co.jpg" alt="Athletics live coverage">
+            <span>LIVE</span>
+            <h3>School Athletics Highlights</h3>
+            <p>Follow the latest from Zambezi Zone Athletics and Mosi Oa Tunya High School sports competitions.</p>
+            <a href="live.html">Watch Live</a>
         </div>
     </div>
-
-    <div class="about-image">
-        <a href="about.html" class="view-more-overlay">View more</a>
-        <img src="images/About us.png" alt="Victoria Falls Media">
-    </div>
-
 </section>
 
-<!-- FOOTER -->
+<section class="about-section reveal" id="about">
+    <div class="section-top">
+        <div>
+            <h1>About Us</h1>
+            <p>The story behind VicFalls Televivi</p>
+        </div>
+        <a href="about.html" class="view-all">Learn More →</a>
+    </div>
+    <div class="about-container">
+        <div class="about-content">
+            <h3>The Voice of Victoria Falls</h3>
+            <p>VicFalls Televivi is the channel for Victoria Falls Broadcasting & Media Production Company, bringing you local news, sports, tourism and cultural stories through video storytelling.</p>
+            <a href="about.html" class="about-btn">Read Our Full Story →</a>
+        </div>
+        <div class="about-image">
+            <img src="images/logo.png" alt="VicFalls Televivi">
+        </div>
+    </div>
+</section>
+
+<section class="contact-section reveal" id="contact">
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="section-intro">
+                <span class="hero-label">Contact & Partnerships</span>
+                <h2>Connect with the VicFalls Televivi newsroom.</h2>
+                <p>Send us your story tip, request coverage, book a partnership package or discuss advertising across our YouTube and Facebook channels.</p>
+                <p class="contact-intro-text">Advertising & partnerships: tailored packages for tourism, local businesses and events — let's build a brief together.</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
+                    <p>Victoria Falls, Zimbabwe</p>
+                </div>
+                <div class="info-box">
+                    <h4><i class="fas fa-phone"></i> Phone</h4>
+                    <p>+263 774 699 049</p>
+                </div>
+                <div class="info-box">
+                    <h4><i class="fas fa-envelope"></i> Email</h4>
+                    <p>vicfallstelevivi@gmail.com</p>
+                </div>
+                <div class="info-box">
+                    <h4><i class="fas fa-clock"></i> Hours</h4>
+                    <p>Mon - Sat: 08:00 - 17:00</p>
+                </div>
+                <div class="info-box">
+                    <h4><i class="fab fa-facebook-f"></i> Facebook</h4>
+                    <p><a href="https://www.facebook.com/vicfallstelevivi" target="_blank" rel="noopener noreferrer">facebook.com/vicfallstelevivi</a></p>
+                </div>
+            </div>
+            <div class="social-links contact-social">
+                <a href="https://www.facebook.com/vicfallstelevivi" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@vicfallstelevivi" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/263774699049" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2>Submit your request</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number">
+                <select required aria-label="Request type">
+                    <option value="">Select request type</option>
+                    <option value="news-tip">News Tip</option>
+                    <option value="advertising">Advertising</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+                <textarea rows="6" placeholder="Tell us how we can help" required></textarea>
+                <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</section>
+
 <footer class="footer">
-
     <div class="footer-container">
-
-        <!-- About -->
         <div class="footer-box">
+            <img src="images/logo.png" alt="VicFalls Televivi" class="footer-logo">
             <h2>VicFalls Televivi</h2>
-            <p>
-                Your trusted source for news, events, entertainment,
-                sports and community stories from Victoria Falls and beyond.
-                Bringing stories that matter to the people.
-            </p>
+            <p>We produce high-impact video stories from Victoria Falls — trusted local journalism for residents, visitors and partners. Work with our team for coverage, sponsorship and bespoke branded content.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/vicfallstelevivi" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@vicfallstelevivi" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/263774699049" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
         </div>
-
-        <!-- Quick Links -->
         <div class="footer-box">
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#news">News</a></li>
-                <li><a href="index.html#events">Events</a></li>
-                <li><a href="index.html#live">Live</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="live.html">Live</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-
-        <!-- Categories -->
         <div class="footer-box">
-            <h3>Categories</h3>
+            <h3>Featured Stories</h3>
             <ul>
-                <li><a href="#">Politics</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Entertainment</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Community</a></li>
+                <li><a href="https://www.youtube.com/watch?v=qK5lsLyyS6M" target="_blank" rel="noopener noreferrer">R. Sibanda, the game changer</a></li>
+                <li><a href="https://www.youtube.com/watch?v=Zx-xEfauWTU" target="_blank" rel="noopener noreferrer">DT BIO Mudimba live at Mapopoma</a></li>
+                <li><a href="https://www.youtube.com/watch?v=n_d7e0AkWEE" target="_blank" rel="noopener noreferrer">Provincial Athletics Day 2</a></li>
             </ul>
         </div>
-
-        <!-- Contact -->
-        <div class="footer-box">
-            <h3>Contact Info</h3>
-
-            <p>📍 Victoria Falls, Zimbabwe</p>
-            <p>📞 +263 774 699 049</p>
-            <p>✉️ vicfallstelevivi@gmail.com</p>
-
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-
+        <div class="footer-box footer-contact-box">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> vicfallstelevivi@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +263 774 699 049</p>
+            <p><i class="fas fa-map-marker-alt"></i> Victoria Falls, Zimbabwe</p>
+            <a href="contact.html" class="footer-link-btn">Work with Us</a>
         </div>
-
     </div>
-
     <div class="footer-bottom">
-        <p>
-            © 2026 VicFalls Televivi. All Rights Reserved. 
-        </p>
+        <p>Built for brands, partners and audiences — delivering high-impact local media for Victoria Falls.</p>
+        <p>&copy; 2026 <span>VicFalls Televivi</span>. All Rights Reserved.</p>
     </div>
-
 </footer>
 
-<script src="script.js"></script>
+<button id="backToTop" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
 
+<script src="script.js"></script>
 </body>
 </html>
-
-
-

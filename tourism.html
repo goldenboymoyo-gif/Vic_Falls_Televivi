@@ -3,41 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events-page</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Victoria Falls tourism coverage by VicFalls Televivi.">
+    <title>Tourism — VicFalls Televivi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-      <!-- Navigation -->
+
+    <!-- Navigation -->
 
 <nav>
-
     <div class="logo">
-        <img src="images/logo.jpeg" alt="VicFalls Televivi">
+        <img src="images/logo.png" alt="VicFalls Televivi" />
     </div>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="desktopNavLinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">Latest News</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Live</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="index.html#news">Latest News</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="tv.html">TV & Videos</a></li>
+        <li><a href="index.html#live">Live</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
     </ul>
 
-    <div class="nav-actions">
-
+    <div class="nav-actions desktop-actions" id="desktopNavActions">
         <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <button>
-                <i class="fas fa-search"></i>
-            </button>
+            <input type="text" placeholder="Search..." />
+            <button aria-label="Search"><i class="fas fa-search"></i></button>
         </div>
-
-        <a href="#" class="login-btn">Login</a>
-
-        <a href="#" class="signup-btn">Sign Up</a>
-
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="sign-up.html" class="signup-btn">Sign Up</a>
     </div>
+
+    <div class="mobile-overlay" id="mobileOverlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#news">Latest News</a></li>
+            <li><a href="index.html#events">Events</a></li>
+            <li><a href="tv.html">TV & Videos</a></li>
+            <li><a href="index.html#live">Live</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions mobile-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+                <button aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="sign-up.html" class="signup-btn">Sign Up</a>
+        </div>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </nav>
 
 <!-- The begining of the events page -->
@@ -68,50 +94,50 @@
      <!--Card section-->
     <div class="events-container">
             <div class="card">
-                <img src="images/marathon.jpg">
+                <img src="images/marathon.jpg" alt="Tourism: Victoria Falls Marathon">
                 <h3>Victoria <span> Falls Marathon</span></h3>
                 <p>Join us for the annual marathon event attracting athletes from around the world.</p>
                 <a href="#" class="see-more">See More</a>
             </div>
             <div class="card">
-                <img src="images/music.png">
+                <img src="images/music.png" alt="Tourism: Music Live Show">
                 <h3>Music <span> Live Show</span></h3>
                 <p>Experience an unforgettable night of live music, electrifying performances, and incredible entertainment.</p>
                 <a href="#" class="see-more">See More</a>
             </div>
             <div class="card">
-                <img src="images/marathon2.jpg">
+                <img src="images/marathon2.jpg" alt="Tourism: Victoria Falls Marathon">
                 <h3>Victoria <span> Falls Marathon</span></h3>
                 <p>Join us for the annual marathon event attracting athletes from around the world.</p>
                 <a href="#" class="see-more">See More</a>
             </div>
             <div class="card">
-                <img src="images/adventure.png">
+                <img src="images/adventure.png" alt="Tourism: Bungee Jumping">
                 <h3>Bounge <span> Jumping</span></h3>
                 <p>Take the ultimate leap of faith with an exhilarating bungee jumping experience! </p>
                 <a href="#" class="see-more">See More</a>
             </div><div class="card">
-                <img src="images/pipeline.png">
+                <img src="images/pipeline.png" alt="Tourism: Victoria Falls Marathon">
                 <h3>Victoria <span> Falls Marathon</span></h3>
                 <p>Stay informed with the latest updates on the explored pipeline as new developments, milestones, and progress continue to unfold.</p>
                 <a href="#" class="see-more">See More</a>
             </div><div class="card">
-                <img src="images/wildlife-sighting.png">
+                <img src="images/wildlife-sighting.png" alt="Tourism: Victoria Falls Marathon">
                 <h3>Victoria <span> Falls Marathon</span></h3>
                 <p>Discover the beauty of nature through exciting wildlife sightings.</p>
                 <a href="#" class="see-more">See More</a>
             </div><div class="card">
-                <img src="images/community.png">
+                <img src="images/community.png" alt="Tourism: Community Gathering">
                 <h3>Commmunity <span>Gathering</span></h3>
                 <p>Bring the community together for a day of connection, culture, and celebration.</p>
                 <a href="#" class="see-more">See More</a>
             </div><div class="card">
-                <img src="images/waterfall.png">
+                <img src="images/waterfall.png" alt="Tourism: Victoria Falls Marathon">
                 <h3>Victoria <span> Falls Marathon</span></h3>
                 <p>Experience the breathtaking beauty of the majestic waterfall, where cascading waters create a spectacular natural wonder.</p>
                 <a href="#" class="see-more">See More</a>
             </div><div class="card">
-                <img src="images/boat-cruise.png">
+                <img src="images/boat-cruise.png" alt="Tourism: Victoria Falls Marathon">
                 <h3>Victoria <span> Falls Marathon</span></h3>
                 <p>Set sail on a relaxing boat cruise and take in stunning riverside views while enjoying a peaceful journey on the water.</p>
                 <a href="#" class="see-more">See More</a>
@@ -121,5 +147,6 @@
     
     <!--the end of the events section -->
     
+<script src="script.js"></script>
 </body>
 </html>

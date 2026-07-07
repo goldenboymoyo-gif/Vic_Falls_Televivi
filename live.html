@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover events in Victoria Falls — music festivals, sports tournaments, community clean-ups, and tourism forums covered by VicFalls Televivi.">
-    <meta property="og:title" content="Events - VicFalls Televivi">
-    <meta property="og:description" content="Discover exciting events happening in Victoria Falls.">
+    <meta name="description" content="Watch live broadcasts from VicFalls Televivi — ongoing events, community news, and sports coverage from Victoria Falls.">
+    <meta property="og:title" content="Live - VicFalls Televivi">
+    <meta property="og:description" content="Watch live broadcasts and ongoing events from Victoria Falls.">
     <meta property="og:image" content="images/logo.png">
     <meta property="og:type" content="website">
-    <title>Events — VicFalls Televivi</title>
+    <title>Live — VicFalls Televivi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/style.css">
@@ -22,17 +22,14 @@
     <ul class="nav-links" id="desktopNavLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="news.html">Latest News</a></li>
-        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="events.html">Events</a></li>
         <li><a href="tv.html">TV & Videos</a></li>
-        <li><a href="live.html">Live</a></li>
+        <li><a href="live.html" class="active">Live</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
     </ul>
     <div class="nav-actions desktop-actions">
-        <div class="search-box">
-            <input type="text" placeholder="Search..." />
-            <button aria-label="Search"><i class="fas fa-search"></i></button>
-        </div>
+        <div class="search-box"><input type="text" placeholder="Search..." /><button aria-label="Search"><i class="fas fa-search"></i></button></div>
         <a href="login.html" class="login-btn">Login</a>
         <a href="sign-up.html" class="signup-btn">Sign Up</a>
     </div>
@@ -58,60 +55,79 @@
 </nav>
 
 <section class="page-banner">
-    <h1>Upcoming Events</h1>
-    <p>Discover exciting events happening in Victoria Falls</p>
+    <h1>Live Broadcasts</h1>
+    <p>Watch ongoing events and live coverage from Victoria Falls</p>
 </section>
 
-<section class="all-events">
-    <div class="event-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="sports">Sports</button>
-        <button class="filter-btn" data-filter="music">Music</button>
-        <button class="filter-btn" data-filter="community">Community</button>
-        <button class="filter-btn" data-filter="tourism">Tourism</button>
+<section class="live-main">
+    <div class="live-featured">
+        <h2>Currently Live</h2>
+        <div class="live-player">
+            <iframe src="https://www.youtube.com/embed/qK5lsLyyS6M?autoplay=1&mute=0&rel=0" title="VicFalls Televivi live stream" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <div class="live-info">
+            <span class="live-badge">LIVE</span>
+            <h3>R. Sibanda: The game changer</h3>
+            <p>Watch our featured story from Mosi Oa Tunya High School and follow the student athlete whose journey is inspiring the Victoria Falls community.</p>
+        </div>
     </div>
-    <div class="events-container">
-        <div class="card" data-category="music">
-            <img src="images/music.jpg" alt="Mapopoma Festival">
-            <h3>Mapopoma Festival</h3>
-            <p>Catch live performances and cultural showcases from Victoria Falls’ biggest music event of the season.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> July 15, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Victoria Falls Town Park</p>
-            <a href="#" class="see-more">Learn More</a>
+
+    <div class="live-upcoming">
+        <h2>Upcoming Broadcasts</h2>
+        <div class="live-schedule">
+            <div class="schedule-item">
+                <div class="schedule-time">Today 14:00</div>
+                <div class="schedule-info">
+                    <h4>Mapopoma Festival Recap</h4>
+                    <p>Highlights from the DT BIO Mudimba live performance.</p>
+                </div>
+            </div>
+            <div class="schedule-item">
+                <div class="schedule-time">Today 18:00</div>
+                <div class="schedule-info">
+                    <h4>Community News Bulletin</h4>
+                    <p>Updates from local leaders, youth initiatives and tourism partners.</p>
+                </div>
+            </div>
+            <div class="schedule-item">
+                <div class="schedule-time">Tomorrow 10:00</div>
+                <div class="schedule-info">
+                    <h4>Zambezi Zone Athletics Roundup</h4>
+                    <p>Live results and interviews from the school sports championships.</p>
+                </div>
+            </div>
         </div>
-        <div class="card" data-category="sports">
-            <img src="images/sports.jpeg" alt="Zambezi Zone Athletics">
-            <h3>Zambezi Zone Athletics Day 2</h3>
-            <p>Student athletes from local schools compete in track and field events, with live coverage from VicFalls Televivi.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> July 20, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Mosi Oa Tunya Stadium</p>
-            <a href="#" class="see-more">Watch Coverage</a>
+    </div>
+</section>
+
+<section class="live-section">
+    <div class="section-top">
+        <div>
+            <h2>More Live Coverage</h2>
+            <p>Recent live broadcasts and event coverage</p>
         </div>
-        <div class="card" data-category="community">
-            <img src="images/communtiy.jpg" alt="Community event">
-            <h3>Community Clean-Up Day</h3>
-            <p>Residents and youth groups join forces to keep tourism routes clean and welcoming for visitors.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> July 22, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Main Street & Victoria Falls Bridge</p>
-            <a href="#" class="see-more">Join Now</a>
+    </div>
+    <div class="live-container">
+        <div class="live-card" onclick="location.href='live.html'">
+            <img src="images/music.jpg" alt="Festival live coverage">
+            <span>LIVE</span>
+            <h3>Mapopoma Festival Recap</h3>
+            <p>Live highlights from the Mapopoma Festival stage, including performances and audience reactions.</p>
+            <a href="live.html">Watch Live</a>
         </div>
-        <div class="card" data-category="tourism">
-            <img src="images/hero-setcion.jpeg" alt="Tourism forum">
-            <h3>Tourism Partner Forum</h3>
-            <p>Discuss new tourism products, training and investment opportunities that support the future of Victoria Falls.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> August 2, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Elephant Hills Hotel</p>
-            <a href="#" class="see-more">Register</a>
+        <div class="live-card" onclick="location.href='live.html'">
+            <img src="images/communtiy.jpg" alt="Community coverage">
+            <span>LIVE</span>
+            <h3>Community News Bulletin</h3>
+            <p>Updates from local leadership, youth initiatives and community development in Victoria Falls.</p>
+            <a href="live.html">Watch Live</a>
         </div>
-        <div class="card" data-category="community">
-            <img src="images/environment.jpg" alt="Health campaign">
-            <h3>Health Awareness Campaign</h3>
-            <p>Free malaria screenings and family health education provided by local clinics and partners.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> July 25, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Municipal Hall</p>
-            <a href="#" class="see-more">Learn More</a>
-        </div>
-        <div class="card" data-category="sports">
-            <img src="images/boxing tournment.jpg" alt="Boxing tournament">
-            <h3>Victoria Falls Boxing Night</h3>
-            <p>Local boxing contenders take the ring in an exciting evening of sport and entertainment.</p>
-            <p class="event-info"><i class="fas fa-calendar"></i> July 28, 2026 &nbsp; <i class="fas fa-map-marker-alt"></i> Victoria Falls Gymnasium</p>
-            <a href="#" class="see-more">Get Tickets</a>
+        <div class="live-card" onclick="location.href='live.html'">
+            <img src="images/sports-co.jpg" alt="Athletics live coverage">
+            <span>LIVE</span>
+            <h3>School Athletics Highlights</h3>
+            <p>Follow the latest from Zambezi Zone Athletics and Mosi Oa Tunya High School sports competitions.</p>
+            <a href="live.html">Watch Live</a>
         </div>
     </div>
 </section>
