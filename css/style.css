@@ -922,7 +922,7 @@ nav {
     z-index:1;
 }
 
-.hero-content{
+.about-hero .hero-content{
     position:relative;
     z-index:2;
     max-width:700px;
@@ -938,26 +938,26 @@ nav {
     padding-left:10px;
 }
 
-.hero-content h1{
+.about-hero .hero-content h1{
     font-size:4rem;
     margin:20px 0;
     color:white;
 }
 
-.hero-content p{
+.about-hero .hero-content p{
     color:#d0d0d0;
     line-height:1.8;
     font-size:18px;
     margin-bottom:30px;
 }
 
-.hero-buttons{
+.about-hero .hero-buttons{
     display:flex;
     gap:12px;
     flex-wrap:wrap;
 }
 
-.btn-primary{
+.about-hero .btn-primary{
     background:#ff2020;
     color:white;
     text-decoration:none;
@@ -967,7 +967,7 @@ nav {
     font-size:0.95rem;
 }
 
-.btn-secondary{
+.about-hero .btn-secondary{
     border:2px solid white;
     color:white;
     text-decoration:none;
@@ -977,8 +977,8 @@ nav {
     font-size:0.75rem;
 }
 
-.btn-primary:hover,
-.btn-secondary:hover{
+.about-hero .btn-primary:hover,
+.about-hero .btn-secondary:hover{
     transform:translateY(-3px);
     transition:0.3s;
 }
