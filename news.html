@@ -49,18 +49,23 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <div class="nav-actions mobile-actions">
-            <div class="search-box">
-                <input type="text" placeholder="Search..." />
-                <button><i class="fas fa-search"></i></button>
-            </div>
             <a href="login.html" class="login-btn">Login</a>
             <a href="sign-up.html" class="signup-btn">Sign Up</a>
         </div>
     </div>
+    <button class="nav-search-toggle" id="navSearchToggle" aria-label="Search">
+        <i class="fas fa-search"></i>
+    </button>
     <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
     </button>
 </nav>
+<div class="mobile-search-bar" id="mobileSearchBar">
+    <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <button><i class="fas fa-search"></i></button>
+    </div>
+</div>
 
 <section class="page-banner">
     <h1>Latest News</h1>

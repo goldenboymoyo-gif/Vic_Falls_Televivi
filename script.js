@@ -44,6 +44,46 @@
     }
 
     // ============================================================
+    // MOBILE SEARCH ICON TOGGLE (separate from hamburger menu)
+    // ============================================================
+    var navSearchToggle = document.getElementById('navSearchToggle');
+    var mobileSearchBar = document.getElementById('mobileSearchBar');
+
+    if (navSearchToggle && mobileSearchBar) {
+        navSearchToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var isActive = mobileSearchBar.classList.toggle('active');
+            navSearchToggle.classList.toggle('active', isActive);
+            if (isActive) {
+                // Close the hamburger menu if it happens to be open
+                if (mobileOverlay && mobileOverlay.classList.contains('active')) {
+                    mobileOverlay.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                var input = mobileSearchBar.querySelector('input');
+                if (input) setTimeout(function() { input.focus(); }, 50);
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            var isBar = mobileSearchBar.contains(e.target);
+            var isToggle = navSearchToggle.contains(e.target);
+            if (!isBar && !isToggle && mobileSearchBar.classList.contains('active')) {
+                mobileSearchBar.classList.remove('active');
+                navSearchToggle.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileSearchBar.classList.contains('active')) {
+                mobileSearchBar.classList.remove('active');
+                navSearchToggle.classList.remove('active');
+            }
+        });
+    }
+
+    // ============================================================
     // AUTO-HIDE NAVBAR ON SCROLL
     // ============================================================
     var nav = document.querySelector('nav');
@@ -183,13 +223,21 @@
         if (!container) return;
         var dropdown = buildSearchDropdown(container);
 
+        var terms = q.split(/\s+/).filter(Boolean);
         var matches = [];
         var seen = {};
 
         for (var i = 0; i < searchIndex.length; i++) {
             var item = searchIndex[i];
             var haystack = (item.title + ' ' + item.keywords + ' ' + item.desc).toLowerCase();
-            if (haystack.indexOf(q) !== -1) {
+            var allTermsMatch = true;
+            for (var t = 0; t < terms.length; t++) {
+                if (haystack.indexOf(terms[t]) === -1) {
+                    allTermsMatch = false;
+                    break;
+                }
+            }
+            if (allTermsMatch) {
                 var key = item.page + '|' + item.title;
                 if (!seen[key]) {
                     seen[key] = true;
@@ -267,9 +315,11 @@
 
     var searchInputs = document.querySelectorAll('.search-box input');
     searchInputs.forEach(function(input) {
+        var debounceTimer = null;
         input.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
+                clearTimeout(debounceTimer);
                 performSearch(this.value, this);
             } else if (e.key === 'Escape') {
                 closeAllSearchDropdowns();
@@ -277,9 +327,15 @@
             }
         });
         input.addEventListener('input', function() {
+            var self = this;
+            clearTimeout(debounceTimer);
             if (!this.value.trim()) {
                 closeAllSearchDropdowns();
+                return;
             }
+            debounceTimer = setTimeout(function() {
+                performSearch(self.value, self);
+            }, 200);
         });
     });
 

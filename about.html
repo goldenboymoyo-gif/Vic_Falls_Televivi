@@ -14,16 +14,17 @@
         <img src="images/logo.png" alt="VicFalls Televivi">
     </div>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="desktopNavLinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#news">Latest News</a></li>
-        <li><a href="index.html#events">Events</a></li>
-        <li><a href="index.html#live">Live</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="index.html#contact">Contact Us</a></li>
+        <li><a href="news.html">Latest News</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tv.html">TV & Videos</a></li>
+        <li><a href="live.html">Live</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
     </ul>
 
-    <div class="nav-actions">
+    <div class="nav-actions desktop-actions">
         <div class="search-box">
             <input type="text" placeholder="Search...">
             <button>
@@ -33,7 +34,38 @@
         <a href="login.html" class="login-btn">Login</a>
         <a href="sign-up.html" class="signup-btn">Sign Up</a>
     </div>
+
+    <div class="mobile-overlay" id="mobileOverlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">Latest News</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="tv.html">TV & Videos</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions mobile-actions">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="sign-up.html" class="signup-btn">Sign Up</a>
+        </div>
+    </div>
+
+    <button class="nav-search-toggle" id="navSearchToggle" aria-label="Search">
+        <i class="fas fa-search"></i>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </nav>
+<div class="mobile-search-bar" id="mobileSearchBar">
+    <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <button><i class="fas fa-search"></i></button>
+    </div>
+</div>
 
 <section class="about-hero">
 
@@ -62,7 +94,7 @@
 
         <div class="hero-buttons">
             <a href="live.html" class="btn-primary">Watch Live</a>
-            <a href="contact.html" class="btn-secondary">Contact Us</a>
+            <a href="contact.html" class="btn-secondary btn-on-dark">Contact Us</a>
         </div>
 
     </div>
