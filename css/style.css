@@ -956,7 +956,7 @@ nav {
 @media(max-width:768px){
 
     .about-hero{
-        min-height:60vh;
+        min-height:100vh;
     }
 
     .about-hero .hero-content{
