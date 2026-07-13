@@ -3033,6 +3033,28 @@ nav {
     gap: 30px;
   }
 
+  .home-about {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 60px 5%;
+  }
+
+  .home-about .about-content {
+    max-width: 100%;
+  }
+
+  .home-about .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-about .about-content p {
+    font-size: 15px;
+  }
+
+  .home-about .about-image {
+    margin-top: 10px;
+  }
+
   .about-stats {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -3219,6 +3241,14 @@ nav {
   .about-stats,
   .about-full .about-stats {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-about .about-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-about .about-content p {
+    font-size: 14px;
   }
 }
 
@@ -3669,6 +3699,19 @@ nav {
   .mobile-actions .search-dropdown-footer {
     color: rgba(255,255,255,0.3);
     border-top-color: rgba(255,255,255,0.08);
+  }
+
+  .mobile-search-bar .search-dropdown {
+    min-width: 0;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  }
+
+  .search-dropdown {
+    min-width: 0;
+    max-width: 100%;
   }
 }
 
