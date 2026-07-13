@@ -238,6 +238,11 @@ nav {
   background: var(--white);
 }
 
+.search-box.search-open {
+  overflow: visible;
+  border-radius: var(--radius-full);
+}
+
 .search-box input {
   flex: 1;
   border: none;
