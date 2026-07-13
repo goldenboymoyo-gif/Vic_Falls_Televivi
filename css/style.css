@@ -957,6 +957,14 @@ nav {
 
     .about-hero{
         min-height:100vh;
+        height:100vh;
+    }
+
+    .hero-video{
+        width:177.78vh;
+        min-width:100vw;
+        height:100vh;
+        min-height:100vh;
     }
 
     .about-hero .hero-content{
