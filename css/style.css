@@ -977,6 +977,7 @@ nav {
 
     .stats{
         grid-template-columns:repeat(2,1fr);
+        padding:20px 0;
     }
 
     .stat-box{
@@ -992,16 +993,26 @@ nav {
         font-size:32px;
     }
 
-    .cards-section{
-        grid-template-columns:repeat(2,1fr);
-    }
-
     .who-we-are{
-        padding:30px 20px;
+        padding:40px 20px;
     }
 
     .who-we-are h2{
         font-size:1.8rem;
+    }
+
+    .cards-section{
+        grid-template-columns:repeat(2,1fr);
+        padding:40px 20px;
+        gap:20px;
+    }
+
+    .card{
+        padding:24px;
+    }
+
+    .services{
+        padding:40px 20px;
     }
 }
 
@@ -1009,6 +1020,7 @@ nav {
 
     .stats{
         grid-template-columns:1fr;
+        padding:10px 0;
     }
 
     .stat-box{
@@ -1378,6 +1390,94 @@ nav {
     .service-grid{
         grid-template-columns:1fr;
     }
+}
+
+/* ============================================================
+   SECTION PAGES (Business, Tourism, Sports, Culture, etc.)
+   ============================================================ */
+.all-section {
+  padding: 70px 8%;
+}
+
+.events-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.events-heading h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.events-heading h1 span {
+  color: var(--primary);
+}
+
+.events-heading p {
+  font-size: 17px;
+  color: var(--gray-500);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding-top: 56.25%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.event-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.event-filters li a {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 2px solid var(--gray-200);
+  background: var(--white);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: var(--transition);
+  color: var(--gray-700);
+  text-decoration: none;
+}
+
+.event-filters li a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.event-filters li a[aria-current="page"],
+.event-filters li a.active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
 }
 
 /* ============================================================
@@ -3114,6 +3214,32 @@ nav {
     grid-template-columns: 1fr;
   }
 
+  .all-section {
+    padding: 50px 5%;
+  }
+
+  .events-heading h1 {
+    font-size: 28px;
+  }
+
+  .events-heading p {
+    font-size: 15px;
+  }
+
+  .video-container {
+    margin-bottom: 30px;
+  }
+
+  .event-filters {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .event-filters li a {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
   .video-grid {
     grid-template-columns: 1fr;
   }
@@ -3254,6 +3380,23 @@ nav {
 
   .home-about .about-content p {
     font-size: 14px;
+  }
+
+  .events-heading h1 {
+    font-size: 22px;
+  }
+
+  .events-heading p {
+    font-size: 14px;
+  }
+
+  .all-section {
+    padding: 40px 5%;
+  }
+
+  .event-filters li a {
+    padding: 7px 14px;
+    font-size: 12px;
   }
 }
 
