@@ -974,102 +974,9 @@ nav {
     .about-hero .hero-buttons{
         flex-direction:column;
     }
-
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-        padding:16px 0;
-    }
-
-    .stat-box{
-        padding:20px 12px;
-        border-right:1px solid var(--gray-200);
-    }
-
-    .stat-box:nth-child(2){
-        border-right:none;
-    }
-
-    .stat-box i{
-        font-size:20px;
-        margin-bottom:12px;
-    }
-
-    .stat-box h2{
-        font-size:26px;
-        margin-bottom:6px;
-    }
-
-    .stat-box p{
-        font-size:13px;
-    }
-
-    .who-we-are{
-        padding:30px 20px;
-        background:var(--white);
-        border-radius:16px;
-        margin:0 20px;
-        box-shadow:0 8px 24px rgba(0,0,0,.08);
-    }
-
-    .who-we-are h2{
-        font-size:1.5rem;
-    }
-
-    .who-we-are p{
-        font-size:15px;
-        line-height:1.7;
-    }
-
-    .cards-section{
-        grid-template-columns:repeat(2,1fr);
-        padding:40px 20px;
-        gap:20px;
-    }
-
-    .card{
-        padding:24px;
-    }
-
-    .services{
-        padding:40px 20px;
-    }
 }
 
 @media(max-width:480px){
-
-    .stats{
-        grid-template-columns:1fr;
-        padding:10px 0;
-    }
-
-    .stat-box{
-        border-right:none;
-        border-bottom:1px solid var(--gray-200);
-        padding:16px 12px;
-    }
-
-    .stat-box:last-child{
-        border-bottom:none;
-    }
-
-    .stat-box i{
-        font-size:18px;
-        margin-bottom:10px;
-    }
-
-    .stat-box h2{
-        font-size:22px;
-        margin-bottom:4px;
-    }
-
-    .stat-box p{
-        font-size:12px;
-    }
-
-    .cards-section{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
 
     .about-hero .hero-content h1{
         font-size:1.8rem;
@@ -1218,6 +1125,85 @@ nav {
     }
 }
 
+/* ABOUT PAGE — STAT & WHO-WE-ARE OVERRIDES (must sit AFTER base rules) */
+@media(max-width:768px){
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+        gap:0;
+        padding:12px 16px;
+    }
+
+    .stat-box{
+        padding:16px 10px;
+        border-right:1px solid var(--gray-200);
+        background:transparent;
+        border-radius:0;
+        box-shadow:none;
+    }
+
+    .stat-box:nth-child(2){
+        border-right:none;
+    }
+
+    .stat-box i{
+        font-size:18px;
+        margin-bottom:8px;
+    }
+
+    .stat-box h2{
+        font-size:22px;
+        margin-bottom:4px;
+    }
+
+    .stat-box p{
+        font-size:12px;
+        color:#8f8f8f;
+    }
+}
+
+@media(max-width:480px){
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+        gap:0;
+        padding:8px 12px;
+    }
+
+    .stat-box{
+        padding:12px 8px;
+        border-right:1px solid var(--gray-200);
+        border-bottom:1px solid var(--gray-200);
+        background:transparent;
+        border-radius:0;
+        box-shadow:none;
+    }
+
+    .stat-box:nth-child(2){
+        border-right:none;
+    }
+
+    .stat-box:nth-child(3){
+        border-bottom:none;
+    }
+
+    .stat-box:nth-child(4){
+        border-bottom:none;
+    }
+
+    .stat-box i{
+        font-size:16px;
+        margin-bottom:6px;
+    }
+
+    .stat-box h2{
+        font-size:18px;
+        margin-bottom:2px;
+    }
+
+    .stat-box p{
+        font-size:11px;
+    }
+}
+
 /* HOME ABOUT SECTION */
 
 .home-about{
@@ -1288,6 +1274,43 @@ nav {
 
 .who-we-are p{
     color:#707070;
+}
+
+@media(max-width:768px){
+    .who-we-are{
+        margin:0 20px;
+        padding:28px 20px;
+        background:#fff;
+        border-radius:16px;
+        box-shadow:0 8px 24px rgba(0,0,0,.08);
+        border:1px solid rgba(0,0,0,.06);
+    }
+
+    .who-we-are h2{
+        font-size:1.5rem;
+        margin-bottom:14px;
+    }
+
+    .who-we-are p{
+        font-size:14px;
+        line-height:1.75;
+        color:#555;
+    }
+}
+
+@media(max-width:480px){
+    .who-we-are{
+        margin:0 16px;
+        padding:24px 16px;
+    }
+
+    .who-we-are h2{
+        font-size:1.3rem;
+    }
+
+    .who-we-are p{
+        font-size:13px;
+    }
 }
 
 /* CARDS */
@@ -1418,6 +1441,30 @@ nav {
 @media(max-width:600px){
     .service-grid{
         grid-template-columns:1fr;
+    }
+}
+
+/* ABOUT PAGE — CARDS & SERVICES OVERRIDES (after base rules) */
+@media(max-width:768px){
+    .cards-section{
+        grid-template-columns:repeat(2,1fr);
+        padding:40px 20px;
+        gap:20px;
+    }
+
+    .card{
+        padding:24px;
+    }
+
+    .services{
+        padding:40px 20px;
+    }
+}
+
+@media(max-width:480px){
+    .cards-section{
+        grid-template-columns:1fr;
+        gap:18px;
     }
 }
 
