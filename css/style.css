@@ -977,11 +977,11 @@ nav {
 
     .stats{
         grid-template-columns:repeat(2,1fr);
-        padding:20px 0;
+        padding:16px 0;
     }
 
     .stat-box{
-        padding:30px 16px;
+        padding:20px 12px;
         border-right:1px solid var(--gray-200);
     }
 
@@ -989,16 +989,35 @@ nav {
         border-right:none;
     }
 
+    .stat-box i{
+        font-size:20px;
+        margin-bottom:12px;
+    }
+
     .stat-box h2{
-        font-size:32px;
+        font-size:26px;
+        margin-bottom:6px;
+    }
+
+    .stat-box p{
+        font-size:13px;
     }
 
     .who-we-are{
-        padding:40px 20px;
+        padding:30px 20px;
+        background:var(--white);
+        border-radius:16px;
+        margin:0 20px;
+        box-shadow:0 8px 24px rgba(0,0,0,.08);
     }
 
     .who-we-are h2{
-        font-size:1.8rem;
+        font-size:1.5rem;
+    }
+
+    .who-we-are p{
+        font-size:15px;
+        line-height:1.7;
     }
 
     .cards-section{
@@ -1026,15 +1045,25 @@ nav {
     .stat-box{
         border-right:none;
         border-bottom:1px solid var(--gray-200);
-        padding:24px 16px;
+        padding:16px 12px;
     }
 
     .stat-box:last-child{
         border-bottom:none;
     }
 
+    .stat-box i{
+        font-size:18px;
+        margin-bottom:10px;
+    }
+
     .stat-box h2{
-        font-size:28px;
+        font-size:22px;
+        margin-bottom:4px;
+    }
+
+    .stat-box p{
+        font-size:12px;
     }
 
     .cards-section{
